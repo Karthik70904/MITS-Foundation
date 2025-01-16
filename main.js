@@ -1,16 +1,16 @@
 // Slider functionality
 let currentSlide = 0;
 const slides = [
-    'https://placehold.co/1200x400',
-    'https://placehold.co/1200x400/2',
-    'https://placehold.co/1200x400/3'
+    'assets/home/11.jpg',
+    'assets/home/12.jpg',
+    'assets/home/13.jpg'
 ];
 
 function updateSlide() {
-    const sliderImg = document.querySelector('.slider img');
-    if (sliderImg) {
-        sliderImg.src = slides[currentSlide];
-    }
+    const sliderImgs = document.querySelectorAll('.slider img');
+    sliderImgs.forEach((img, index) => {
+        img.style.display = (index === currentSlide) ? 'block' : 'none';
+    });
 }
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -37,6 +37,9 @@ document.addEventListener('DOMContentLoaded', function() {
         currentSlide = (currentSlide + 1) % slides.length;
         updateSlide();
     }, 5000);
+
+    // Initialize the slider
+    updateSlide();
 
     // Transaction Modal
     const modal = document.getElementById('transactionModal');

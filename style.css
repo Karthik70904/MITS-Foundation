@@ -65,8 +65,11 @@ body {
 
 /* Hero Section */
 .hero {
+    display: flex;
     margin-top: 90px;
     padding: 2rem 0;
+    align-items: center;
+    min-height: 100vh;
 }
 
 .hero-content {
@@ -83,6 +86,8 @@ body {
 
 .slider-container {
     position: relative;
+    width: 1000px;
+    height: 350px;
     border-radius: 15px;
     overflow: hidden;
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);

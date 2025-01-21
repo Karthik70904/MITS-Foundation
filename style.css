@@ -93,13 +93,35 @@ body {
 .hero-content {
 	/* max-width: 90%; */
 	margin: 0 auto;
+	position: relative;
 }
 
 .hero h1 {
 	color: var(--primary-color);
 	font-size: 2.5rem;
 	margin-bottom: 2rem;
+	position: absolute;
+	z-index: 100;
+	background-color: var(--secondary-color);
+	padding: 0.5rem;
+	border-top-left-radius: 15px;
+	border-bottom-right-radius: 15px;
 }
+.curves{
+	position: relative;
+}
+.hero h1::before{
+	position: absolute;
+	content: "";
+	width: 15px;
+	aspect-ratio: 1;
+	background-color: red;
+	z-index: 1000;
+	top: 0;
+	right: -15px;
+	border-top-left-radius: 15px;
+}
+
 
 .slider-container {
 	position: relative;

@@ -6,6 +6,7 @@
     <title>About - MITS Foundation</title>
     <link rel="shortcut icon" href="assets/images/logo1.png" type="image/x-icon">
     <link rel="stylesheet" href="assets/styles/about.css">
+    <link rel="stylesheet" href="assets/styles/header.css">
 
 </head>
 <body>
@@ -38,7 +39,7 @@
 
                 <div class="content-grid">
                     <div class="image-block">
-                        <img src="https://via.placeholder.com/500x300" alt="MITS Building" class="building-img">
+                        <img src="/assets/home/11.jpg" alt="MITS Building" class="building-img">
                     </div>
                     <div class="text-block">
                         <h2>Purpose and Services</h2>
@@ -123,14 +124,19 @@
 
     <!-- Footer -->
     <footer class="main-footer">
+        <div class="linear"></div>
         <div class="footer-container">
             <div class="footer-left">
-                <img src="assets/images/logo1.png" alt="MITS Foundation Logo" style="width: 250px; height: 250px;border-radius: 75px;">
+                <div style="display: flex; flex-direction: column; justify-content: space-around;">
+                    <img src="assets/images/logo1.png" alt="MITS Foundation Logo"
+                        style="width: 100px; height: 100px;border-radius: 75px;">
+                </div>
                 <div class="foundation-info">
                     <h3>MITS Foundation</h3>
                     <p>Where Creativity meets Innovation</p>
                     <a href="mailto:mits@mitsfoundation.org">mits@mitsfoundation.org</a>
                 </div>
+
             </div>
             <div class="footer-center">
                 <div class="social-media">
@@ -149,28 +155,28 @@
                 </div>
             </div>
             <div class="footer-right">
+                <div class="map">
+                    <iframe
+                        src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8&q=Madanapalle%20institute%20&zoom=10&maptype=satellite"
+                        style="border:0;" allowfullscreen="" loading="lazy">
+                    </iframe>
+                </div>
                 <div class="address">
                     <h4>Madanapalle Institute of Technology & Science Foundation</h4>
                     <p>Kadiri Road Angallu, Village,</p>
                     <p>Madanapalle, Andhra Pradesh,</p>
                     <p>517325</p>
                 </div>
-                <div class="map">
-                    <iframe 
-                        src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8&q=Madanapalle%20institute%20&zoom=10&maptype=satellite"  --> -->
-                        width="100%" 
-                        height="150" 
-                        style="border:0;" 
-                        allowfullscreen="" 
-                        loading="lazy">
-                    </iframe>
-                </div>
             </div>
         </div>
-        <div class="footer-bottom">
-            <p>&copy; 2024 MITS Foundation. All rights reserved.</p>
-            <button class="reach-us-btn">Reach Us</button>
+        <p style="white-space: nowrap; z-index: 100; position: absolute; left: 8%; bottom: -10%; color: var(--primary-color);">&copy; 2024 MITS Foundation. All
+            rights reserved.</p>
+        
+        <div class="reach-us">
+            <i class="bi bi-geo-alt-fill"></i>
+            <span>Reach Us</span>
         </div>
+
     </footer>
 </body>
 </html>

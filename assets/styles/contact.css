@@ -15,6 +15,10 @@ body {
     line-height: 1.6;
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 81f01a7ad1af50b9251e036881006a38a994463e
 .contact-header {
     padding: 2rem;
     max-width: 600px;
@@ -81,7 +85,7 @@ body {
     line-height: 1.5;
 }
 
-.map {
+.contact-map {
     flex: 1;
     height: 300px;
     border-radius: 15px;
@@ -199,7 +203,7 @@ textarea {
         font-weight: 600;
     }
     
-    .map {
+    .contact-map {
         height: 250px;
     }
     
@@ -229,6 +233,10 @@ textarea {
         width: 100%;
         padding: 0.8rem;
     }
+<<<<<<< HEAD
 }
 
 
+=======
+}
+>>>>>>> 81f01a7ad1af50b9251e036881006a38a994463e

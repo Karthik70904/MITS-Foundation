@@ -12,6 +12,18 @@ body {
 	color: var(--text-color);
 	background-color: var(--secondary-color);
 }
+<<<<<<< HEAD
+=======
+
+.bg-addon {
+	position: absolute;
+	top: 0;
+	left: 20vw;
+	z-index: 1001;
+	opacity: 0.3;
+}
+
+>>>>>>> 81f01a7ad1af50b9251e036881006a38a994463e
 /* Hero Section */
 .hero {
 	display: flex;
@@ -323,6 +335,7 @@ body {
 
 .dot.active {
 	background: var(--primary-color);
+<<<<<<< HEAD
 }
 
 /* Footer */
@@ -527,4 +540,6 @@ button[type="submit"] {
 	font-weight: 500;
 	width: 100%;
 	margin-top: 1rem;
+=======
+>>>>>>> 81f01a7ad1af50b9251e036881006a38a994463e
 }

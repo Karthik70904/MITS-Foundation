@@ -12,6 +12,10 @@ body {
     color: var(--text-color);
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 81f01a7ad1af50b9251e036881006a38a994463e
 
 /* Main Content */
 main {
@@ -159,6 +163,38 @@ main {
     height: 50px;
 }
 
+<<<<<<< HEAD
+=======
+
+@media (max-width: 768px) {
+    .content-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .footer-links {
+        grid-template-columns: 1fr;
+    }
+    
+    .objectives-pentagon {
+        height: auto;
+    }
+    
+    .objective-item {
+        position: static;
+        width: 100%;
+        margin-bottom: 2rem;
+        transform: none;
+    }
+    
+    .center-icon {
+        position: static;
+        margin: 2rem auto;
+        transform: none;
+    }
+}
+
+
+>>>>>>> 81f01a7ad1af50b9251e036881006a38a994463e
 /* Directors Section */
 .directors-section {
     text-align: center;
@@ -226,7 +262,6 @@ main {
     font-size: 0.9rem;
 }
 
-/* Rest of the existing styles remain unchanged */
 
 @media (max-width: 768px) {
     .directors-grid {
@@ -239,5 +274,8 @@ main {
         max-width: 280px;
     }
 
+<<<<<<< HEAD
     /* Other existing media queries remain unchanged */
+=======
+>>>>>>> 81f01a7ad1af50b9251e036881006a38a994463e
 }

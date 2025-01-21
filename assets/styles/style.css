@@ -52,6 +52,10 @@ body {
 
 .nav-links {
 	display: flex;
+	position: fixed;
+	right: 10%;
+	z-index: 10000;
+	background-color: white;
 	gap: 2rem;
 	align-items: center;
 	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);

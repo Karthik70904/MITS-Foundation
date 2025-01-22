@@ -13,6 +13,22 @@ function updateSlide() {
     });
 }
 
+function isVisible(e) {
+    return !!( e.offsetWidth || e.offsetHeight || e.getClientRects().length );
+}
+
+
+document.addEventListener('scroll', () => {
+    const vision = document.querySelector('.vision-mission-container');
+    const visionbox = document.querySelector('.vision-box p');
+    const missionbox = document.querySelector('.mission-box p');
+    if (isVisible(vision)) {
+        visionbox.classList.add('scroll-animate');
+        missionbox.classList.add('scroll-animate');
+        console.log('Visible');
+    }
+});
+
 document.addEventListener('DOMContentLoaded', function() {
     // Slider controls
     const nextBtn = document.querySelector('.next');

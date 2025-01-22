@@ -97,10 +97,11 @@
 }
 
 .map {
-    aspect-ratio: 1;
-    height: 100%;
+    width: 800px; 
+    height: auto;
     border-radius: 8px;
     overflow: hidden;
+    
 }
 
 iframe {

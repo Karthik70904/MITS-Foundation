@@ -268,3 +268,195 @@ main {
     }
 
 }
+
+/* Container and layout */
+.container-o {
+    min-height: 100vh;
+    padding: 2rem 1rem;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .content-o {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+  }
+  
+  /* Header styles */
+  header {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #1e3a8a;
+    margin-bottom: 0.5rem;
+  }
+  
+  header p {
+    color: #4b5563;
+    font-size: 1.125rem;
+  }
+  
+  /* Background patterns */
+  .pattern-o {
+    position: absolute;
+    opacity: 0.1;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 0.5rem;
+  }
+  
+  .pattern-o::before {
+    content: '';
+    width: 1rem;
+    height: 1rem;
+    border: 2px solid #1e3a8a;
+    transform: rotate(45deg);
+  }
+  
+  .pattern-top-o {
+    top: 0;
+    right: 0;
+  }
+  
+  .pattern-bottom-o {
+    bottom: 0;
+    left: 0;
+  }
+  
+  /* Objectives layout */
+  .objectives-o {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .objective-o {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+  }
+  
+  .objective-right-o {
+    justify-content: flex-end;
+  }
+  
+  .objective-content-o {
+    background-color: #FFF5F3;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    border: 4px solid #1D5392;
+  }
+  
+  /* Icon styles */
+  .icon-container-o {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .objective-left-o .icon-container-o {
+    right: -1rem;
+  }
+  
+  .objective-right-o .icon-container-o {
+    left: -1rem;
+  }
+  
+  .icon-o {
+    background-color: #dbeafe;
+    padding: 1rem;
+    border-radius: 1rem;
+    transform: rotate(45deg);
+    width: 5rem;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+  }
+  
+  .icon-o svg {
+    transform: rotate(-45deg);
+    color: #1e3a8a;
+  }
+  
+  /* Text content */
+  .objective-content-o p {
+    font-size: 1.125rem;
+    color: #1e3a8a;
+    padding-right: 3rem;
+  }
+  
+  .objective-right-o .objective-content-o p {
+    padding-right: 0;
+    padding-left: 3rem;
+  }
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
+    .container-o {
+      padding: 1rem;
+    }
+  
+    h1 {
+      font-size: 2rem;
+    }
+  
+    .objective-o {
+      justify-content: center;
+    }
+  
+    .objective-content-o {
+      max-width: 100%;
+    }
+  
+    .objective-content-o p {
+      padding-right: 3rem;
+    }
+  
+    .objective-right-o .objective-content-o p {
+      padding-left: 3rem;
+    }
+  
+    .icon-o {
+      width: 3rem;
+      height: 3rem;
+    }
+  
+    .icon-o svg {
+      width: 20px;
+      height: 20px;
+    }
+  }
+  
+  /* Pattern grid */
+  .pattern-o::before {
+    content: '';
+  }
+  
+  .pattern-o {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 0.5rem;
+  }
+  
+  .pattern-o::before,
+  .pattern-o::after,
+  .pattern-o *,
+  .pattern-o *::before,
+  .pattern-o *::after {
+    content: '';
+    width: 1rem;
+    height: 1rem;
+    border: 2px solid #1e3a8a;
+    transform: rotate(45deg);
+  }

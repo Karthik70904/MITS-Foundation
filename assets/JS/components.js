@@ -33,7 +33,9 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 function toggleMenu() {
-    var navLinks = document.getElementById('navLinks');
+    var navLinks = document.querySelector('.nav-links');
     navLinks.classList.toggle('show');
     console.log('Menu toggled');
+    document.querySelector('.hamburger i').classList.toggle('bi-x');
+    console.log(navLinks.classList);
 }

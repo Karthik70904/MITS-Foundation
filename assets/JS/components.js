@@ -9,6 +9,8 @@ document.addEventListener("DOMContentLoaded", function() {
         })
         .then(data => {
             document.body.insertAdjacentHTML("afterbegin", data);
+            // Add event listener for the hamburger button after the nav is loaded
+            // document.querySelector('.hamburger').addEventListener('click', toggleMenu);
         })
         .catch(error => {
             console.error('There was a problem with the fetch operation for nav:', error);
@@ -29,3 +31,9 @@ document.addEventListener("DOMContentLoaded", function() {
             console.error('There was a problem with the fetch operation for footer:', error);
         });
 });
+
+function toggleMenu() {
+    var navLinks = document.getElementById('navLinks');
+    navLinks.classList.toggle('show');
+    console.log('Menu toggled');
+}

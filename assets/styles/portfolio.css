@@ -182,51 +182,6 @@ body {
     padding: 1rem;
 }
 
-<<<<<<< HEAD
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .nav-links {
-        display: none;
-    }
-    
-    .company-logos {
-        flex-wrap: wrap;
-        gap: 2rem;
-    }
-    
-    .company-card {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        padding: 1.5rem;
-    }
-    
-    .company-card img {
-        margin-right: 0;
-        margin-bottom: 1.5rem;
-        width: 100px;
-    }
-    
-    .company-info p {
-        text-align: center;
-    }
-    
-    .stories-container {
-        flex-direction: column;
-    }
-}
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Inter', sans-serif;
-}
-=======
->>>>>>> 81f01a7ad1af50b9251e036881006a38a994463e
 
 .incubated-companies {
     background-color: #fff5f3;

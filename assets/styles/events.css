@@ -1,0 +1,266 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, sans-serif;
+  }
+  
+  body {
+    background-color: #f5f7fa;
+  }
+  
+  .container-u {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  h1 {
+    color: #1a4b8c;
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+  }
+  
+  .content-u {
+    display: flex;
+    gap: 40px;
+  }
+  
+  .events-grid-u {
+    flex: 2;
+    background-color: #e8f0f8;
+    padding: 24px;
+    border-radius: 8px;
+    height: 600px;
+    overflow-y: auto;
+  }
+  
+  .events-grid-content-u {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  
+  /* Customize scrollbar */
+  .events-grid-u::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  .events-grid-u::-webkit-scrollbar-track {
+    background: #e8f0f8;
+    border-radius: 4px;
+  }
+  
+  .events-grid-u::-webkit-scrollbar-thumb {
+    background: #1a4b8c;
+    border-radius: 4px;
+  }
+  
+  .events-grid-u::-webkit-scrollbar-thumb:hover {
+    background: #153d73;
+  }
+  
+  .event-card-u {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .event-card-u h2 {
+    color: #1a4b8c;
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+  }
+  
+  .event-details-u p {
+    margin-bottom: 5px;
+    color: #444;
+    font-size: 0.9rem;
+  }
+  
+  .event-description-u {
+    color: #666;
+    font-size: 0.9rem;
+    margin: 15px 0;
+    line-height: 1.5;
+  }
+  
+  .subscribe-btn-u {
+    background: #1a4b8c;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.3s;
+    width: 100%;
+  }
+  
+  .subscribe-btn-u:hover {
+    background: #153d73;
+  }
+  
+  .newsletter-section-u {
+    flex: 1;
+    background: url('https://images.unsplash.com/photo-1541829070764-84a7d30dd3f3?ixlib=rb-4.0.3') center/cover;
+    padding: 40px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+    position: relative;
+  }
+  
+  .newsletter-section-u::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(26, 75, 140, 0.8);
+    border-radius: 8px;
+  }
+  
+  .newsletter-section-u h2 {
+    position: relative;
+    z-index: 1;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+  }
+  
+  .newsletter-form-u {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .newsletter-form-u input {
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    width: 100%;
+  }
+  
+  /* Tablet Styles */
+  @media (max-width: 1024px) {
+    .container-u {
+      padding: 15px;
+    }
+  
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 30px;
+    }
+  
+    .content-u {
+      flex-direction: column;
+    }
+    
+    .events-grid-u {
+      height: 500px;
+    }
+  
+    .events-grid-content-u {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .newsletter-section-u {
+      min-height: 250px;
+      padding: 30px;
+    }
+  
+    .newsletter-section-u h2 {
+      font-size: 1.5rem;
+    }
+  }
+  
+  /* Mobile Styles */
+  @media (max-width: 768px) {
+    .container-u {
+      padding: 10px;
+    }
+  
+    h1 {
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+    }
+  
+    .content-u {
+      gap: 20px;
+    }
+  
+    .events-grid-u {
+      padding: 15px;
+      height: 450px;
+    }
+  
+    .events-grid-content-u {
+      grid-template-columns: 1fr;
+      gap: 15px;
+    }
+  
+    .event-card-u {
+      padding: 15px;
+    }
+  
+    .event-card-u h2 {
+      font-size: 1.3rem;
+    }
+  
+    .event-details-u p {
+      font-size: 0.85rem;
+    }
+  
+    .event-description-u {
+      font-size: 0.85rem;
+      margin: 12px 0;
+    }
+  
+    .newsletter-section-u {
+      min-height: 200px;
+      padding: 20px;
+    }
+  
+    .newsletter-section-u h2 {
+      font-size: 1.3rem;
+      margin-bottom: 15px;
+    }
+  
+    .subscribe-btn-u {
+      padding: 8px 16px;
+      font-size: 0.85rem;
+    }
+  
+    .newsletter-form-u input {
+      padding: 10px;
+      font-size: 0.9rem;
+    }
+  }
+  
+  /* Small Mobile Styles */
+  @media (max-width: 480px) {
+    h1 {
+      font-size: 1.5rem;
+    }
+  
+    .events-grid-u {
+      height: 400px;
+      padding: 12px;
+    }
+  
+    .event-card-u h2 {
+      font-size: 1.2rem;
+    }
+  
+    .newsletter-section-u {
+      padding: 15px;
+    }
+  }

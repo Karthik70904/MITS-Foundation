@@ -27,6 +27,15 @@ body {
     left: 20vw;
     z-index: 1001;
     opacity: 0.3;
+    transform: scale(0);
+    transform-origin: top;
+    animation: moveDown 1s ease-in-out 1s forwards;
+}
+
+@keyframes moveDown {
+    to {
+        transform: scale(1);
+    }
 }
 
 .main-nav {

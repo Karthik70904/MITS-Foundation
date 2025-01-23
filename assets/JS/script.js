@@ -25,7 +25,7 @@ document.addEventListener('scroll', () => {
     if (isVisible(vision)) {
         visionbox.classList.add('scroll-animate');
         missionbox.classList.add('scroll-animate');
-        console.log('Visible');
+        //console.log('Visible');
     }
 });
 

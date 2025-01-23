@@ -9,8 +9,8 @@ document.addEventListener("DOMContentLoaded", function() {
         })
         .then(data => {
             document.body.insertAdjacentHTML("afterbegin", data);
-            // Add event listener for the hamburger button after the nav is loaded
-            // document.querySelector('.hamburger').addEventListener('click', toggleMenu);
+            // Event listener for the hamburger button after the nav is loaded
+            document.querySelector('.hamburger').addEventListener('click', toggleMenu);
         })
         .catch(error => {
             console.error('There was a problem with the fetch operation for nav:', error);
@@ -26,6 +26,11 @@ document.addEventListener("DOMContentLoaded", function() {
         })
         .then(data => {
             document.body.insertAdjacentHTML("beforeend", data);
+            // Event listener for the reach-us div after the footer is loaded
+            document.querySelector('.reach-us').addEventListener('click', () => {
+                // console.log('Reach us clicked!');
+                window.open("https://www.google.com/maps/search/?api=1&query=Madanapalle+Institute+of+Technology+and+Science", "_blank");
+            });
         })
         .catch(error => {
             console.error('There was a problem with the fetch operation for footer:', error);
@@ -35,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function() {
 function toggleMenu() {
     var navLinks = document.querySelector('.nav-links');
     navLinks.classList.toggle('show');
-    console.log('Menu toggled');
+    // console.log('Menu toggled');
     document.querySelector('.hamburger i').classList.toggle('bi-x');
-    console.log(navLinks.classList);
+    // console.log(navLinks.classList);
 }

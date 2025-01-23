@@ -6,11 +6,11 @@
   }
   
   body {
-    background-color: #f5f7fa;
+    background-color: #ffffff;
   }
   
   .container-u {
-    max-width: 1200px;
+    max-width: 1450px;
     margin: 0 auto;
     padding: 20px;
   }
@@ -24,6 +24,7 @@
   
   .content-u {
     display: flex;
+    min-width: 1200px;
     gap: 40px;
   }
   
@@ -44,7 +45,7 @@
   
   /* Customize scrollbar */
   .events-grid-u::-webkit-scrollbar {
-    width: 8px;
+    width: 6px;
   }
   
   .events-grid-u::-webkit-scrollbar-track {
@@ -122,7 +123,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(26, 75, 140, 0.8);
+    background: rgba(26, 75, 140, 0.6);
     border-radius: 8px;
   }
   

@@ -162,11 +162,11 @@ body {
 }
 
 .vision-mission-container {
-	max-width: 1200px;
+	max-width: 1400px;
 	margin: 0 auto;
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
-	gap: 2rem;
+	gap: 6rem;
 }
 
 .vision-box,
@@ -175,7 +175,7 @@ body {
 	flex-direction: column;
 	background: #d6e4f0;
 	gap: 2rem;
-	padding: 2rem;
+	padding: 2rem 3rem;
 	border-radius: 15px;
 	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
@@ -200,8 +200,12 @@ body {
 .mission-box h3 {
 	color: var(--primary-color);
 	text-align: end;
-	font-size: 2rem;
+	font-size: 2.5rem;
 	/* margin-bottom: 1rem; */
+}
+
+.vision-box p, .mission-box p {
+	text-align: justify;
 }
 
 /* Thrust Areas */
@@ -272,7 +276,7 @@ body {
 
 .area-card {
 	padding: 2rem;
-	background: #f7f2f1;
+	/* background: #f7f2f1; */
 	border-radius: 15px;
 	transition: all 200ms ease-in-out;
 	display: flex;
@@ -281,7 +285,7 @@ body {
 }
 
 .area-card:hover {
-	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+	/* box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); */
 	cursor: pointer;
 }
 
@@ -302,6 +306,7 @@ body {
 	font-family: "Public Sans";
 	font-weight: 700;
 	font-size: 1.5rem;
+	text-align: left;
 }
 
 /* Portfolio */
@@ -315,6 +320,7 @@ body {
 	color: var(--primary-color);
 	margin-bottom: 3rem;
 	font-size: 2rem;
+	text-decoration: underline;
 }
 
 .portfolio-grid {

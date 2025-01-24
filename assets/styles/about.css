@@ -279,6 +279,7 @@ main {
 	}
 }
 
+
 /* Container and layout */
 .container-o {
 	min-height: 100vh;
@@ -519,3 +520,144 @@ header p {
 	border: 2px solid #1e3a8a;
 	transform: rotate(45deg);
 }
+
+.container-v {
+	min-height: 100vh;
+	background-color: #D6E4F0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 10px;
+	position: relative;
+	overflow: hidden;
+	border-radius: 16px;
+	margin-top: 100px;
+  }
+  
+  .volunteer-section-v {
+	display: flex;
+	max-width: 1000px; /* Decreased from 1200px */
+	background: white;
+	border-radius: 20px;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	overflow: hidden;
+	position: relative;
+	z-index: 1;
+  }
+  
+  .content-left-v {
+	flex: 1;
+	padding: 30px; /* Decreased from 40px */
+	position: relative;
+  }  
+  .title-v {
+	color: #1a365d;
+	font-size: 2.2rem; /* Decreased from 2.5rem */
+	margin-bottom: 15px; /* Decreased from 20px */
+	margin-top: 30px; /* Decreased from 40px */
+	text-align: center
+  }
+  
+  .description-v {
+	color: #4a5568;
+	line-height: 1.6;
+	margin-bottom: 15px; /* Decreased from 20px */
+  }
+  
+  .form-right-v {
+	flex: 1;
+	padding: 30px; /* Decreased from 40px */
+	background: #ffffff;
+  }
+  
+  .volunteer-form-v {
+	display: flex;
+	flex-direction: column;
+	gap: 15px; /* Decreased from 20px */
+  }
+  
+  .form-group-v {
+	display: flex;
+	flex-direction: column;
+	gap: 6px; /* Decreased from 8px */
+  }
+  
+  .form-group-v label {
+	color: #4a5568;
+	font-weight: 500;
+  }
+  
+  .form-group-v input,
+  .form-group-v textarea {
+	padding: 8px; /* Decreased from 10px */
+	border: 1px solid #e2e8f0;
+	border-radius: 8px;
+	font-size: 1rem;
+	transition: border-color 0.3s ease;
+  }
+  
+  .form-group-v input:focus,
+  .form-group-v textarea:focus {
+	outline: none;
+	border-color: #3182ce;
+	box-shadow: 0 0 0 3px rgba(49, 130, 206, 0.1);
+  }
+  
+  .submit-btn-v {
+	background-color: #2b6cb0;
+	color: white;
+	padding: 10px 20px; /* Decreased from 12px 24px */
+	border: none;
+	border-radius: 8px;
+	font-size: 1rem;
+	font-weight: 600;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+  }
+  
+  .submit-btn-v:hover {
+	background-color: #2c5282;
+  }
+  
+  /* Mobile Responsive Styles */
+  @media (max-width: 768px) {
+	.volunteer-section-v {
+	  flex-direction: column;
+	  margin: 15px; /* Decreased from 20px */
+	}
+  
+	.content-left-v,
+	.form-right-v {
+	  padding: 20px;
+	}
+  
+	.title-v {
+	  font-size: 1.8rem; /* Decreased from 2rem */
+	  margin-top: 15px; /* Decreased from 20px */
+	}
+  
+	.circles-v,
+	.circles-bottom-v {
+	  width: 60px; /* Decreased from 80px */
+	  height: 60px; /* Decreased from 80px */
+	}
+  }
+  
+  @media (max-width: 480px) {
+	.title-v {
+	  font-size: 1.5rem; /* Decreased from 1.75rem */
+	}
+  
+	.description-v {
+	  font-size: 0.9rem;
+	}
+  
+	.form-group-v input,
+	.form-group-v textarea {
+	  font-size: 0.9rem;
+	}
+  
+	.submit-btn-v {
+	  width: 100%;
+	}
+  }

@@ -519,3 +519,139 @@ header p {
 	border: 2px solid #1e3a8a;
 	transform: rotate(45deg);
 }
+
+.container-v {
+    width: 100%;
+    max-width: 900px;
+    padding: 20px;
+	margin: 0 auto;
+}
+
+.volunteer-section-v {
+    background-color: #D6E4F0;
+    border-radius: 25px;
+    overflow: hidden;
+    display: flex;
+    gap: 40px;
+    padding: 40px;
+    position: relative;
+}
+
+.info-section-v {
+    flex: 1;
+    padding-right: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.info-section-v h2 {
+    color: #2c5282;
+    margin-bottom: 20px;
+    font-size: 1.8em;
+}
+
+.info-section-v p {
+    color: #4a5568;
+    line-height: 1.8;
+    font-size: 0.9em;
+}
+
+.form-section-v {
+    flex: 1;
+}
+
+.form-group-v {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    color: #2d3748;
+    font-weight: 500;
+    font-size: 0.9em;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #e2e8f0;
+    border-radius: 4px;
+    font-size: 0.9em;
+    background-color: #ffffff;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: #4299e1;
+    box-shadow: 0 0 0 2px rgba(66, 153, 225, 0.1);
+}
+
+button {
+    background-color: #2b6cb0;
+    color: white;
+    padding: 8px 24px;
+    border: none;
+    border-radius: 4px;
+    font-size: 0.9em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: auto;
+}
+
+button:hover {
+    background-color: #2c5282;
+}
+
+/* Add decorative circles in the background */
+.volunteer-section-v::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 150px;
+    height: 150px;
+    background: radial-gradient(circle, #e2e8f0 1px, transparent 1px);
+    background-size: 10px 10px;
+    opacity: 0.5;
+}
+
+/* Mobile Responsive Design */
+@media screen and (max-width: 768px) {
+    .volunteer-section-v {
+        flex-direction: column;
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .info-section-v {
+        padding-right: 0;
+    }
+
+    .info-section-v h2 {
+        font-size: 1.5em;
+    }
+
+    .container-v {
+        padding: 10px;
+    }
+
+    input, textarea {
+        padding: 8px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .volunteer-section-v {
+        padding: 15px;
+    }
+
+    .form-group-v {
+        margin-bottom: 12px;
+    }
+
+    .info-section-v h2 {
+        font-size: 1.3em;
+    }
+}

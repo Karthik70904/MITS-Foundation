@@ -26,7 +26,7 @@ body {
 .bg-addon {
     position: absolute;
     top: 0;
-    left: 20vw;
+    left: 25vw;
     z-index: 1001;
     opacity: 0.3;
     transform: scale(0);
@@ -36,7 +36,7 @@ body {
 
 @keyframes moveDown {
     to {
-        transform: scale(1);
+        transform: scale(0.9);
     }
 }
 
@@ -81,6 +81,7 @@ body {
     color: var(--text-color);
     padding: 0.75rem 2rem;
     font-weight: 500;
+    font-family: system-ui, -apple-system, sans-serif;
     white-space: nowrap;
 }
 

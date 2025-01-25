@@ -31,3 +31,11 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+
+document.querySelector('.faq').addEventListener('click', (e) => {
+    var faq = e.target;
+    while (faq.tagName !== 'DIV') {
+        faq = faq.parentElement;
+    }
+    faq.classList.toggle('active');
+})

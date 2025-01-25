@@ -28,9 +28,10 @@ body {
     top: 0;
     left: 25vw;
     z-index: 1001;
-    opacity: 0.3;
+    opacity: 0.5;
     transform: scale(0);
     transform-origin: top;
+    width: 220px;
     animation: moveDown 1s ease-in-out 1s forwards;
 }
 

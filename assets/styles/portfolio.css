@@ -5,7 +5,11 @@
     --white: #ffffff;
 }
 
-
+#nav-portfolio{
+	color: var(--primary-color);
+	font-weight: 700;
+	font-size: 1rem;
+}
 
 body {
     line-height: 1.6;

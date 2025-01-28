@@ -161,7 +161,7 @@ body {
 .vision-mission h2 {
 	color: var(--primary-color);
 	margin-bottom: 3rem;
-	font-size: 2rem;
+	font-size: 2.5rem;
 }
 
 .vision-mission-container {
@@ -203,7 +203,7 @@ body {
 .mission-box h3 {
 	color: var(--primary-color);
 	text-align: end;
-	font-size: 2.5rem;
+	font-size: 2rem;
 	/* margin-bottom: 1rem; */
 }
 
@@ -261,12 +261,13 @@ body {
 .thrust-areas h2 {
 	color: var(--primary-color);
 	margin-bottom: 1rem;
-	font-size: 2rem;
+	font-size: 2.5rem;
 }
 
 .subtitle {
-	margin-bottom: 3rem;
+	margin-bottom: 1rem;
 	color: #666;
+	font-size: 1.1rem;
 }
 
 .areas-grid {
@@ -293,7 +294,7 @@ body {
 }
 
 .area-card i {
-	font-size: 2.5rem;
+	font-size: 2rem;
 	color: var(--primary-color);
 	margin-bottom: 1rem;
 }
@@ -322,7 +323,7 @@ body {
 .portfolio h2 {
 	color: var(--primary-color);
 	margin-bottom: 3rem;
-	font-size: 2rem;
+	font-size: 2.5rem;
 	text-decoration: underline;
 }
 

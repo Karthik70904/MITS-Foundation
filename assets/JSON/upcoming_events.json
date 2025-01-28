@@ -1,0 +1,52 @@
+{
+    "events": [
+    {
+      "title": "Tech Vision 2025",
+      "date": "March 5, 2025",
+      "time": "10:00 AM - 4:00 PM",
+      "location": "MITS Auditorium, Madanapalle",
+      "description": "A one-day seminar on emerging technologies, including AI, Blockchain & Quantum Computing. Keynote speakers include industry leaders from top tech firms.",
+      "buttonLink": "#"
+    },
+    {
+      "title": "Data Science Summit",
+      "date": "March 20, 2025",
+      "time": "10:00 AM - 4:00 PM",
+      "location": "MITS Auditorium, Madanapalle",
+      "description": "Deep dive into data science, machine learning, and analytics. Learn from industry experts about the latest trends and technologies.",
+      "buttonLink": "#"
+    },
+    {
+      "title": "Web Development Workshop",
+      "date": "March 15, 2025",
+      "time": "9:00 AM - 5:00 PM",
+      "location": "MITS Auditorium, Madanapalle",
+      "description": "Hands-on workshop covering modern web development technologies, frameworks, & best practices help you succeed in the evolving world of web development.",
+      "buttonLink": "#"
+    },
+    {
+      "title": "Cloud Computing Conference",
+      "date": "March 25, 2025",
+      "time": "10:00 AM - 4:00 PM",
+      "location": "MITS Auditorium, Madanapalle",
+      "description": "Explore cloud technologies, serverless architecture, and DevOps practices. Featuring workshops and hands-on sessions.",
+      "buttonLink": "#"
+    },
+    {
+      "title": "Cybersecurity Workshop",
+      "date": "April 1, 2025",
+      "time": "10:00 AM - 4:00 PM",
+      "location": "MITS Auditorium, Madanapalle",
+      "description": "Learn about the latest cybersecurity threats and defense strategies. Includes practical sessions on security tools and techniques.",
+      "buttonLink": "#"
+    },
+    {
+      "title": "Mobile App Development",
+      "date": "April 5, 2025",
+      "time": "10:00 AM - 4:00 PM",
+      "location": "MITS Auditorium, Madanapalle",
+      "description": "Comprehensive workshop on mobile app development using React Native and Flutter. Build cross-platform apps efficiently.",
+      "buttonLink": "#"
+    }
+  ]
+}

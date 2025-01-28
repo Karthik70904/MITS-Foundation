@@ -1,0 +1,11 @@
+{
+    "newsletter": [
+        {
+        "title": "Subscribe to our Newsletter",
+        "formAction": "https://mits-foundation-fast-api.onrender.com/newsletter/",
+        "inputPlaceholder": "Enter your email",
+        "buttonText": "Subscribe Now",
+        "link":"#"
+      }
+    ]
+}

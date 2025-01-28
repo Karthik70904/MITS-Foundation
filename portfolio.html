@@ -39,7 +39,7 @@
         <h2 style="color: var(--primary-color);">Our Esteemed Partner</h2>
         <p>Collaborating with Industry leaders to foster Innovation</p>
         <div class="partner-logo">
-            <img src="assets\company\MSME_logo.png" alt="MSME">
+            <img src="assets/company/MSME_logo.png" alt="MSME">
         </div>
     </section>
 
@@ -48,110 +48,49 @@
         <p class="subtitle">Raising stars of our incubation center</p>
 
         <div class="companies-container">
-            <!-- Show only the first 5 company cards initially -->
-            <div class="company-card">
-                <div class="company-logo">
-                    <img src="assets\company\motol.png" alt="Motol Hub LLP">
-                </div>
-                <div class="company-info">
-                    <h3>Motol Hub LLP</h3>
-                    <p>An online e-com platform to book accommodation at PGs and hotels as well as groceries, hotels,
-                        pick-up and delivery of items, etc.</p>
-                    <button class="know-more">Know More</button>
-                </div>
-            </div>
-
-            <div class="company-card">
-                <div class="company-logo">
-                    <img src="assets\company\pragyashal.png" alt="Pragyashal">
-                </div>
-                <div class="company-info">
-                    <h3>Pragyashal Private Limited</h3>
-                    <p>PRAGYASHAL is a next-generation EdTech platform founded by students from IIT Madras, driven by a
-                        passion for transforming education through Artificial Intelligence (AI). As a recognized Google
-                        Cloud Partner, a proud member of the NVIDIA Inception Program, and a participant in Microsoft
-                        for Startups and Zoho for Startups, we are on a mission to revolutionize learning with
-                        cutting-edge AI-powered educational tools.</p>
-                    <button class="know-more">Know More</button>
-                </div>
-            </div>
-
-            <div class="company-card">
-                <div class="company-logo">
-                    <img src="assets\company\algain.png" alt="Algain Electronics">
-                </div>
-                <div class="company-info">
-                    <h3>Algain Electronics Private Limited</h3>
-                    <p>Algain Electronics is an electronic product founded in 2023. Our product development includes
-                        energy saving LED lights & smart accessories. We investigate the problems and find right
-                        solutions. With the latest cutting-edge technology, domestic as well industry related optimal
-                        energy saving products are designed.</p>
-                    <button class="know-more">Know More</button>
-                </div>
-            </div>
-
-            <div class="company-card">
-                <div class="company-logo">
-                    <img src="assets\company\Arv_organics.png" alt="Aurv Organics">
-                </div>
-                <div class="company-info">
-                    <h3>Aurv Organics Private Limited</h3>
-                    <p>Aurv Organics Pvt. Ltd. provides you the best range of moong dal, organic soaps, body butter,
-                        handmade soap, face gel & eye kajal with effective & timely delivery.</p>
-                    <button class="know-more">Know More</button>
-                </div>
-            </div>
-
-            <div class="company-card">
-                <div class="company-logo">
-                    <img src="assets\company\gyaantrix.jpg" alt="Gyaantrix Technologies">
-                </div>
-                <div class="company-info">
-                    <h3>Gyaantrix Technologies Private Limited</h3>
-                    <p>Gyaantrix Technologies is a forward-thinking technology company dedicated to driving innovation
-                        for a better world. Founded with a vision to revolutionize industries through cutting-edge
-                        technology, specialized in developing groundbreaking projects across various sectors. From
-                        streamlining legal processes and breaking language barriers to enhancing security in
-                        transportation hubs and providing comprehensive support for students planning to study abroad,
-                        committed to creating transformative solutions that address pressing global challenges.</p>
-                    <button class="know-more">Know More</button>
-                </div>
-            </div>
-            <div class="company-card">
-                <div class="company-logo">
-                    <img src="assets\company\gyaantrix.jpg" alt="Gyaantrix Technologies">
-                </div>
-                <div class="company-info">
-                    <h3>Gyaantrix Technologies Private Limited</h3>
-                    <p>Gyaantrix Technologies is a forward-thinking technology company dedicated to driving innovation
-                        for a better world. Founded with a vision to revolutionize industries through cutting-edge
-                        technology, specialized in developing groundbreaking projects across various sectors. From
-                        streamlining legal processes and breaking language barriers to enhancing security in
-                        transportation hubs and providing comprehensive support for students planning to study abroad,
-                        committed to creating transformative solutions that address pressing global challenges.</p>
-                    <button class="know-more">Know More</button>
-                </div>
-            </div>
-            <div class="company-card">
-                <div class="company-logo">
-                    <img src="assets\company\gyaantrix.jpg" alt="Gyaantrix Technologies">
-                </div>
-                <div class="company-info">
-                    <h3>Gyaantrix Technologies Private Limited</h3>
-                    <p>Gyaantrix Technologies is a forward-thinking technology company dedicated to driving innovation
-                        for a better world. Founded with a vision to revolutionize industries through cutting-edge
-                        technology, specialized in developing groundbreaking projects across various sectors. From
-                        streamlining legal processes and breaking language barriers to enhancing security in
-                        transportation hubs and providing comprehensive support for students planning to study abroad,
-                        committed to creating transformative solutions that address pressing global challenges.</p>
-                    <button class="know-more">Know More</button>
-                </div>
-            </div>
+            <!-- Companies will be added here -->
         </div>
 
+        <!-- Fetch companies.json -->
+        <script>
+          fetch('assets/JSON/companies.json')
+            .then(response => response.json())
+            .then(data => {
+              const companiesContainer = document.querySelector('.companies-container');
+              data.companies.forEach(company => {
+                const companyCard = document.createElement('div');
+                companyCard.classList.add('company-card');
+                companyCard.innerHTML = `
+                  <div class="company-logo">
+                      <img src="${company.logo}" alt="${company.name}">
+                  </div>
+                  <div class="company-info">
+                      <h3>${company.name}</h3>
+                      <p>${company.description}</p>
+                      <button class="know-more" onclick="knowMore('${company.buttonLink}')">Know More</button>
+                  </div>
+                `;
+                companiesContainer.appendChild(companyCard);
+              });
+            })
+            .catch(error => console.error('Error loading companies:', error));
+        
+            function knowMore(url) {
+              try {
+                if (url != null && url != '' && url != '#') {
+                  window.open(url, '_blank');
+                } else {
+                  throw new Error('Invalid URL');
+                }
+              } catch (error) {
+                console.error('Error opening URL:', error);
+              }
+            }
+        </script>
+
         <div class="navigation">
-            <button class="nav-btn prev">←</button>
-            <button class="nav-btn next">→</button>
+            <button class="nav-btn prev"><i class="fas fa-arrow-left"></i></button>
+            <button class="nav-btn next"><i class="fas fa-arrow-right"></i></button>
         </div>
     </section>
 
@@ -163,7 +102,7 @@
             <!-- First set of cards -->
             <div class="card-s">
                 <div class="company-logo-s">
-                    <img src="assets\images\portfolio\1.png" alt="Company Logo">
+                    <img src="assets/images/portfolio/1.png" alt="Company Logo">
                 </div>
                 <p class="testimonial-s">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                     incididunt ut labore et dolore magna aliqua."</p>
@@ -178,7 +117,7 @@
 
             <div class="card-s">
                 <div class="company-logo-s">
-                    <img src="assets\images\portfolio\2.png" alt="Pragyashal Logo">
+                    <img src="assets/images/portfolio/2.png" alt="Pragyashal Logo">
                 </div>
                 <p class="testimonial-s">"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
                     doloremque laudantium."</p>
@@ -193,7 +132,7 @@
 
             <div class="card-s">
                 <div class="company-logo-s">
-                    <img src="assets\images\portfolio\3.png" alt="Airy Organics Logo">
+                    <img src="assets/images/portfolio/3.png" alt="Airy Organics Logo">
                 </div>
                 <p class="testimonial-s">"At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
                     praesentium voluptatum."</p>

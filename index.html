@@ -68,8 +68,7 @@
             <div class="area-card">
                 <i class="fa-solid fa-microchip"></i>
                 <h3>Cyber & AI Innovation</h3>
-                <p>Advancing Cyber Security, Artificial Intelligence, and Information & Communication Technology (ICT)
-                    to create secure digital systems and smarter communication networks.</p>
+                <p>Advancing Cyber Security, Artificial Intelligence, and Information & Communication Technology (ICT) to create secure digital systems and smarter communication networks.</p>
             </div>
             <div class="area-card">
                 <i class="fa-solid fa-robot"></i>
@@ -99,91 +98,62 @@
     </section>
 
     <div class="container-u">
-        <h2>Upcoming Events</h2>
-        
-        <div class="content-u">
-          <div class="events-grid-u">
-            <div class="events-grid-content-u">
-              <div class="event-card-u">
-                <h2>Tech Vision 2025</h2>
-                <div class="event-details-u">
-                  <p>Date: March 5, 2025</p>
-                  <p>Time: 10:00 AM - 4:00 PM</p>
-                  <p>Location: MITS Auditorium, Madanapalle</p>
-                </div>
-                <p class="event-description-u">A one-day seminar on emerging technologies, including AI, Blockchain & Quantum Computing. Keynote speakers include industry leaders from top tech firms.</p>
-                <button class="subscribe-btn-u">Register Now</button>
-              </div>
-
-                
-              <div class="event-card-u">
-                <h2>Data Science Summit</h2>
-                <div class="event-details-u">
-                  <p>Date: March 20, 2025</p>
-                  <p>Time: 10:00 AM - 4:00 PM</p>
-                  <p>Location: MITS Auditorium, Madanapalle</p>
-                </div>
-                <p class="event-description-u">Deep dive into data science, machine learning, and analytics. Learn from industry experts about the latest trends and technologies.</p>
-                <button class="subscribe-btn-u">Register Now</button>
-              </div>
-  
-              <div class="event-card-u">
-                <h2>Web Development Workshop</h2>
-                <div class="event-details-u">
-                  <p>Date: March 15, 2025</p>
-                  <p>Time: 9:00 AM - 5:00 PM</p>
-                  <p>Location: MITS Auditorium, Madanapalle</p>
-                </div>
-                <p class="event-description-u">Hands-on workshop covering modern web development technologies, frameworks, & best practices help you succeed in the evolving world of web development..</p>
-                <button class="subscribe-btn-u">Register Now</button>
-              </div>
-  
-              <div class="event-card-u">
-                <h2>Cloud Computing Conference</h2>
-                <div class="event-details-u">
-                  <p>Date: March 25, 2025</p>
-                  <p>Time: 10:00 AM - 4:00 PM</p>
-                  <p>Location: MITS Auditorium, Madanapalle</p>
-                </div>
-                <p class="event-description-u">Explore cloud technologies, serverless architecture, and DevOps practices. Featuring workshops and hands-on sessions.</p>
-                <button class="subscribe-btn-u">Register Now</button>
-              </div>
-  
-              <div class="event-card-u">
-                <h2>Cybersecurity Workshop</h2>
-                <div class="event-details-u">
-                  <p>Date: April 1, 2025</p>
-                  <p>Time: 10:00 AM - 4:00 PM</p>
-                  <p>Location: MITS Auditorium, Madanapalle</p>
-                </div>
-                <p class="event-description-u">Learn about the latest cybersecurity threats and defense strategies. Includes practical sessions on security tools and techniques.</p>
-                <button class="subscribe-btn-u">Register Now</button>
-              </div>
-  
-              <div class="event-card-u">
-                <h2>Mobile App Development</h2>
-                <div class="event-details-u">
-                  <p>Date: April 5, 2025</p>
-                  <p>Time: 10:00 AM - 4:00 PM</p>
-                  <p>Location: MITS Auditorium, Madanapalle</p>
-                </div>
-                <p class="event-description-u">Comprehensive workshop on mobile app development using React Native and Flutter. Build cross-platform apps efficiently.</p>
-                <button class="subscribe-btn-u">Register Now</button>
-              </div>
-            </div>
+      <h2>Upcoming Events</h2>
+      
+      <div class="content-u">
+        <div class="events-grid-u">
+          <div class="events-grid-content-u">
+            <!-- Event cards will be dynamically inserted here -->
           </div>
+        </div>
+        <!-- Fetch upcoming_events.json -->
+        <script>
+          fetch('assets/JSON/upcoming_events.json')
+            .then(response => response.json())
+            .then(data => {
+              const eventsContainer = document.querySelector('.events-grid-content-u');
+              data.events.forEach(event => {
+                const eventCard = document.createElement('div');
+                eventCard.classList.add('event-card-u');
+                eventCard.innerHTML = `
+                  <h2>${event.title}</h2>
+                  <div class="event-details-u">
+                    <p>Date: ${event.date}</p>
+                    <p>Time: ${event.time}</p>
+                    <p>Location: ${event.location}</p>
+                  </div>
+                  <p class="event-description-u">${event.description}</p>
+                  <button class="subscribe-btn-u" onclick="registerEvent('${event.buttonLink}')">Register Now</button>
+                `;
+                eventsContainer.appendChild(eventCard);
+              });
+            })
+            .catch(error => console.error('Error loading events:', error));
   
-          <div class="newsletter-section-u">
-            <h2>Subscribe to our Newsletter</h2>
-            <form action="https://mits-foundation-fast-api.onrender.com/newsletter/" method="post">
+            function registerEvent(url) {
+              try {
+                if (url != null && url != '' && url != '#') {
+                  window.open(url, '_blank');
+                } else {
+                  throw new Error('Invalid URL');
+                }
+              } catch (error) {
+                console.error('Error opening URL:', error);
+              }
+            }
+        </script>
+
+        <div class="newsletter-section-u">
+          <h2>Subscribe to our Newsletter</h2>
+          <form action="https://mits-foundation-fast-api.onrender.com/newsletter/" method="post">
             <div class="newsletter-form-u">
               <input type="email" name="email" placeholder="Enter your email">
               <button type="submit" class="news-subscribe-btn-u">Subscribe Now</button>
             </div>
-            </form>
-          </div>
+          </form>
         </div>
       </div>
+    </div>
 
     <!-- Portfolio -->
     <section class="portfolio" id="portfolio">
@@ -212,11 +182,6 @@
 
     <script src="assets/JS/components.js" defer></script>
     <script src="assets/JS/script.js" defer></script>
-    <script>
-      window.onload = () => {
-        document.querySelector('#nav-home').style.color = '#1a4b8c';
-      }
-    </script>
 </body>
 
 </html>

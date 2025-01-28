@@ -1,0 +1,34 @@
+{
+    "companies": [
+      {
+        "name": "Motol Hub LLP",
+        "logo": "assets/company/motol.png",
+        "description": "An online e-com platform to book accommodation at PGs and hotels as well as groceries, hotels, pick-up and delivery of items, etc.",
+        "buttonLink": "#"
+      },
+      {
+        "name": "Pragyashal Private Limited",
+        "logo": "assets/company/pragyashal.png",
+        "description": "PRAGYASHAL is a next-generation EdTech platform founded by students from IIT Madras, driven by a passion for transforming education through Artificial Intelligence (AI). As a recognized Google Cloud Partner, a proud member of the NVIDIA Inception Program, and a participant in Microsoft for Startups and Zoho for Startups, we are on a mission to revolutionize learning with cutting-edge AI-powered educational tools.",
+        "buttonLink": "#"
+      },
+      {
+        "name": "Algain Electronics Private Limited",
+        "logo": "assets/company/algain.png",
+        "description": "Algain Electronics is an electronic product founded in 2023. Our product development includes energy saving LED lights & smart accessories. We investigate the problems and find right solutions. With the latest cutting-edge technology, domestic as well as industry related optimal energy saving products are designed.",
+        "buttonLink": "#"
+      },
+      {
+        "name": "Aurv Organics Private Limited",
+        "logo": "assets/company/Arv_organics.png",
+        "description": "Aurv Organics Pvt. Ltd. provides you the best range of moong dal, organic soaps, body butter, handmade soap, face gel & eye kajal with effective & timely delivery.",
+        "buttonLink": "#"
+      },
+      {
+        "name": "Gyaantrix Technologies Private Limited",
+        "logo": "assets/company/gyaantrix.jpg",
+        "description": "Gyaantrix Technologies is a forward-thinking technology company dedicated to driving innovation for a better world. Founded with a vision to revolutionize industries through cutting-edge technology, specialized in developing groundbreaking projects across various sectors. From streamlining legal processes and breaking language barriers to enhancing security in transportation hubs and providing comprehensive support for students planning to study abroad, committed to creating transformative solutions that address pressing global challenges.",
+        "buttonLink":"#"
+      }
+    ]
+}

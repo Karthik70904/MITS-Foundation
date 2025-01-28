@@ -54,10 +54,10 @@
         <section class="contact-form">
             <h2>Get in Touch</h2>
             <p>Ready to Transform Your Idea into Reality?</p>
-            <form id="contactForm" onsubmit="return handleSubmit(event)">
+            <form id="contactForm" action="https://mits-foundation-fast-api.onrender.com/get_in_touch/">
                 <div class="form-group">
                     <label for="fullName">Full Name:</label>
-                    <input type="fullName" id="fullName" name="fullName" required />
+                    <input type="fullName" id="fullName" name="name" required />
                 </div>
                 <div class="form-row">
                     <div class="form-group">
@@ -66,12 +66,12 @@
                     </div>
                     <div class="form-group">
                         <label for="mobile">Mobile Number:</label>
-                        <input type="tel" id="mobile" name="mobile" required />
+                        <input type="tel" id="mobile" name="phone" required />
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="message">Message:</label>
-                    <textarea id="message" name="message" required></textarea>
+                    <textarea id="message" name="query" required></textarea>
                 </div>
                 <button type="submit" class="submit-btn">Submit</button>
             </form>

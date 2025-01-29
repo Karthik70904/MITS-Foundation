@@ -156,28 +156,61 @@
     </div>
 
     <!-- Portfolio -->
-    <section class="portfolio" id="portfolio">
+      <section class="portfolio" id="portfolio">
         <h2>Portfolio</h2>
-        <div class="portfolio-grid">
-            <img src="https://placehold.co/200x80" alt="MOTOL">
-            <img src="https://placehold.co/200x80" alt="Pragyashal">
-            <img src="https://placehold.co/200x80" alt="Algain">
-            <img src="https://placehold.co/200x80" alt="Data Elegance">
-            <img src="https://placehold.co/200x80" alt="Tech Company">
+        <div class="portfolio-grid" id="portfolio-grid">
+            <!-- Images will be loaded here dynamically -->
         </div>
-
-        
-
-        <div class="portfolio-dots">
-            <span class="dot active"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
+        <script id="portfolio-data" type="application/json">
+          [
+              {
+                  "image": "https://placehold.co/200x80",
+                  "alt": "MOTOL"
+              },
+              {
+                  "image": "https://placehold.co/200x80",
+                  "alt": "Pragyashal"
+              },
+              {
+                  "image": "https://placehold.co/200x80",
+                  "alt": "Algain"
+              },
+              {
+                  "image": "https://placehold.co/200x80",
+                  "alt": "Data Elegance"
+              },
+              {
+                  "image": "https://placehold.co/200x80",
+                  "alt": "Tech Company"
+              }
+          ]
+        </script>
+        <div class="portfolio-dots" id="portfolio-dots">
+            <!-- Dots will be loaded here dynamically -->
         </div>
+        <script>
+          document.addEventListener('DOMContentLoaded', function() {
+              const portfolioData = JSON.parse(document.getElementById('portfolio-data').textContent);
+              const portfolioGrid = document.getElementById('portfolio-grid');
+              const portfolioDots = document.getElementById('portfolio-dots');
+    
+              portfolioData.forEach((item, index) => {
+                // Create and append image elements
+                const img = document.createElement('img');
+                img.src = item.image;
+                img.alt = item.alt;
+                portfolioGrid.appendChild(img);
+    
+                // Create and append dot elements
+                const dot = document.createElement('span');
+                dot.className = 'dot';
+                if (index === 0) {
+                    dot.classList.add('active');
+                }
+                portfolioDots.appendChild(dot);
+              });
+            });
+        </script>
     </section>
 
     <script src="assets/JS/components.js" defer></script>

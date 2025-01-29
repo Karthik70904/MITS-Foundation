@@ -361,8 +361,10 @@ body {
 	background: #ccc;
 	border-radius: 50%;
 	cursor: pointer;
+	transform: scale(0.8);
 }
 
 .dot.active {
 	background: var(--primary-color);
+	transform: scale(1.1);
 }

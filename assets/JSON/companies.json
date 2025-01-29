@@ -4,31 +4,55 @@
         "name": "Motol Hub LLP",
         "logo": "assets/company/motol.png",
         "description": "An online e-com platform to book accommodation at PGs and hotels as well as groceries, hotels, pick-up and delivery of items, etc.",
-        "buttonLink": "#"
+        "buttonLink": "https://motol.in/"
       },
       {
         "name": "Pragyashal Private Limited",
         "logo": "assets/company/pragyashal.png",
         "description": "PRAGYASHAL is a next-generation EdTech platform founded by students from IIT Madras, driven by a passion for transforming education through Artificial Intelligence (AI). As a recognized Google Cloud Partner, a proud member of the NVIDIA Inception Program, and a participant in Microsoft for Startups and Zoho for Startups, we are on a mission to revolutionize learning with cutting-edge AI-powered educational tools.",
-        "buttonLink": "#"
+        "buttonLink": "https://www.linkedin.com/company/pragyashal/?originalSubdomain=in "
       },
       {
         "name": "Algain Electronics Private Limited",
         "logo": "assets/company/algain.png",
         "description": "Algain Electronics is an electronic product founded in 2023. Our product development includes energy saving LED lights & smart accessories. We investigate the problems and find right solutions. With the latest cutting-edge technology, domestic as well as industry related optimal energy saving products are designed.",
-        "buttonLink": "#"
+        "buttonLink": "https://algainelectronics.com/ "
       },
       {
         "name": "Aurv Organics Private Limited",
         "logo": "assets/company/Arv_organics.png",
         "description": "Aurv Organics Pvt. Ltd. provides you the best range of moong dal, organic soaps, body butter, handmade soap, face gel & eye kajal with effective & timely delivery.",
-        "buttonLink": "#"
+        "buttonLink": "https://www.indiamart.com/aurv-organics-pvt-ltd/enquiry.html  "
       },
       {
         "name": "Gyaantrix Technologies Private Limited",
         "logo": "assets/company/gyaantrix.jpg",
-        "description": "Gyaantrix Technologies is a forward-thinking technology company dedicated to driving innovation for a better world. Founded with a vision to revolutionize industries through cutting-edge technology, specialized in developing groundbreaking projects across various sectors. From streamlining legal processes and breaking language barriers to enhancing security in transportation hubs and providing comprehensive support for students planning to study abroad, committed to creating transformative solutions that address pressing global challenges.",
-        "buttonLink":"#"
+        "description": "Gyaantrix Technologies is a forward-thinking company dedicated to driving innovation. They revolutionize industries through cutting-edge technology, specializing in projects across various sectors. From streamlining legal processes and breaking language barriers to enhancing security in transportation hubs and supporting students planning to study abroad, Gyaantrix is committed to creating transformative solutions for global challenges.",
+        "buttonLink":"https://www.linkedin.com/company/gyaantrix-technologies-private-limited/"
+      },
+      {
+        "name": "Hexaind Technologies And Services LLP",
+        "logo": "assets/company/hexaind.png",
+        "description": "HEXAIND Technologies & Services was started in the year 2010 as a web designing company. The simplicity and quality involved in the designs opened doors to multiple digital infrastructure and information technology services eventually. In the year 2014, HEXAIND T&S launched its cloud-based SaaS & IaaS services in association with global cloud giants. Now we offer services and assistance in versatile areas of cloud computing and digital infrastructure.",
+        "buttonLink":"https://hexaind.com/"
+      },
+      {
+        "name": "Creomind Innovations Private Limited",
+        "logo": "assets/company/creomind.png",
+        "description": "Creomind Innovations is a startup company focused on creating solution to the projects, providing education and upskill the Technical Students. We are passionate about providing the required skills to learners and experience by assigning projects to them.",
+        "buttonLink":"https://sites.google.com/view/creomindinnovations "
+      },
+      {
+        "name": "Srivari Farm Equipments",
+        "logo": "assets/company/gyaantrix.jpg",
+        "description": "",
+        "buttonLink":"https://www.indiamart.com/sri-vari-farm-equipments/"
+      },
+      {
+        "name": "Harebin Tech solutions Private Limited",
+        "logo": "assets/company/HBtech.png",
+        "description": "Harebin Tech Solutions is a dynamic service and product-based company dedicated to providing top-tier tech solutions. Our team of experts excels in offering a range of services, from software development and IT consulting to digital transformation and more.",
+        "buttonLink":"https://harebin.com/ "
       }
     ]
 }

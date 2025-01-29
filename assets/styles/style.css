@@ -13,6 +13,13 @@
 	box-sizing: border-box;
 	scroll-behavior: smooth;
 }
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
 body {
 	font-family: Arial, sans-serif;
 	line-height: 1.6;
@@ -20,7 +27,7 @@ body {
 	background-color: var(--secondary-color);
 }
 
-#nav-home{
+#nav-home {
 	color: var(--primary-color);
 	font-weight: 700;
 	font-size: 1rem;
@@ -122,7 +129,7 @@ body {
 	border-radius: 10px;
 }
 
-.slider-controls{
+.slider-controls {
 	position: absolute;
 	bottom: 0;
 	transform: translateY(50%);
@@ -147,7 +154,7 @@ body {
 	border: 5px solid var(--secondary-color);
 }
 
-.slider-controls i{
+.slider-controls i {
 	font-size: 30px;
 	font-weight: 700;
 }
@@ -216,7 +223,8 @@ body {
 	/* margin-bottom: 1rem; */
 }
 
-.vision-box p, .mission-box p {
+.vision-box p,
+.mission-box p {
 	text-align: justify;
 }
 
@@ -246,23 +254,23 @@ body {
 	transform: scale(0) rotate(-90deg);
 	left: -11vw;
 	top: 35vh;
-	transform-origin:top;
-	animation: scale-left  1s ease-in-out 1s forwards;
+	transform-origin: top;
+	animation: scale-left 1s ease-in-out 1s forwards;
 }
 
 @keyframes scale-left {
-	from{
+	from {
 		transform: scale(0) rotate(-90deg);
 	}
-	to{
+	to {
 		transform: scale(1) rotate(-90deg);
 	}
 }
 @keyframes scale-right {
-	from{
+	from {
 		transform: scale(0) rotate(90deg);
 	}
-	to{
+	to {
 		transform: scale(1) rotate(90deg);
 	}
 }
@@ -374,4 +382,91 @@ body {
 .dot.active {
 	background: var(--primary-color);
 	transform: scale(1.1);
+}
+
+@media screen and (max-width: 600px) {
+	.hero h1 {
+		font-size: 1.8rem;
+		padding: 0;
+	}
+
+	.hero {
+		height: auto;
+		min-height: auto;
+		padding: 5rem 0 0 0;
+	}
+
+	.slider-container {
+		aspect-ratio: 16/9 !important;
+		height: auto;
+	}
+
+	.vision-mission h2 {
+		font-size: 1.8rem;
+		white-space: nowrap;
+	}
+
+	.vision-mission-container {
+		grid-template-columns: auto;
+		gap: 1rem;
+	}
+
+	.vision-box {
+		flex-direction: column;
+	}
+
+	.vision-box,
+	.mission-box {
+		padding: 2rem;
+		gap: 1rem;
+	}
+
+	.vision-box h3,
+	.mission-box h3 {
+		font-size: 1.5rem;
+		text-align: left;
+	}
+
+	.vision-box p,
+	.mission-box p {
+		font-size: 0.8rem;
+	}
+
+	.thrust-areas h2{
+		font-size: 1.8rem;
+	}
+
+	.thrust-areas p{
+		font-size: 0.8rem;
+	}
+
+	.thrust-areas .areas-grid{
+		grid-template-columns: auto;
+		gap: 10px;
+	}
+
+	.area-card{
+		padding: 0.5rem;
+		border: 2px solid #e4dfde;
+	}
+
+	.area-card h3{
+		font-size: 1rem;
+	}
+
+	.container-u h2{
+		font-size: 1.8rem;
+	}
+
+	.content-u{
+		min-width: auto !important;
+	}
+
+	.event-card-u{
+		width: 100%;
+	}
+
+	.addon-1, .addon-2{
+		display: none;
+	}
 }

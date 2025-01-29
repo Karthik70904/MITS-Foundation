@@ -114,16 +114,20 @@
     
                 prevButton.addEventListener('click', function() {
                     if (currentIndex > 0) {
-                        currentIndex--;
-                        renderCompanies();
+                            currentIndex--;
+                    } else {
+                        currentIndex = Math.ceil(companies.length / companiesPerPage) - 1; // Set to the last page
                     }
+                        renderCompanies();
                 });
     
                 nextButton.addEventListener('click', function() {
                     if ((currentIndex + 1) * companiesPerPage < companies.length) {
                         currentIndex++;
-                        renderCompanies();
+                    } else {
+                        currentIndex = 0;
                     }
+                        renderCompanies();
                 });
             });
         </script>
@@ -293,44 +297,6 @@
     </section> -->
 
     <script src="assets/JS/components.js" defer></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const container = document.querySelector('.companies-container');
-            const cards = Array.from(container.children);
-            const prevBtn = document.querySelector('.nav-btn.prev');
-            const nextBtn = document.querySelector('.nav-btn.next');
-            let currentIndex = 0;
-            const itemsPerPage = 5;
-
-            function scrollToElement(elementId) {
-                const element = document.getElementById(elementId);
-                if (element) {
-                    element.scrollIntoView({
-                        behavior: 'smooth' // Optional for smooth scrolling
-                    });
-                }
-            }
-
-            function updateCarousel() {
-                cards.forEach((card, index) => {
-                    card.style.display = (index >= currentIndex && index < currentIndex + itemsPerPage) ? 'flex' : 'none';
-                });
-                scrollToElement('incubated-companies')
-            }
-
-            prevBtn.addEventListener('click', () => {
-                currentIndex = (currentIndex - itemsPerPage + cards.length) % cards.length;
-                updateCarousel();
-            });
-
-            nextBtn.addEventListener('click', () => {
-                currentIndex = (currentIndex + itemsPerPage) % cards.length;
-                updateCarousel();
-            });
-
-            updateCarousel();
-        });
-    </script>
     <script>
         window.onload = () => {
             document.querySelector('#nav-portfolio').style.color = '#1a4b8c';

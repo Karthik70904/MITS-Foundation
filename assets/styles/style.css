@@ -6,6 +6,13 @@
 	--text-color: #333;
 	--spacing: 2rem;
 }
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+}
 body {
 	font-family: Arial, sans-serif;
 	line-height: 1.6;

@@ -52,3 +52,16 @@ function handleLogoClick(url) {
     else
         window.open(url, '_blank');
 }
+
+// Transparent nav while scrolling
+document.addEventListener('scroll', function() {
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+    if (window.scrollY > 50) { // Adjust the scroll value as needed
+        hamburger.classList.add('transparent');
+        navLinks.classList.add('transparent');
+    } else {
+        hamburger.classList.remove('transparent');
+        navLinks.classList.remove('transparent');
+    }
+});

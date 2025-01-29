@@ -78,6 +78,11 @@ body {
 	align-items: center;
 	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 	border-radius: 50vh;
+    transition: opacity 0.3s ease;
+}
+
+.nav-links.transparent {
+    opacity: 0.8;
 }
 
 .nav-links a {
@@ -114,6 +119,14 @@ body {
 	cursor: pointer;
 	font-weight: 500;
 	z-index: 10001;
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    transition: opacity 0.3s ease;
+}
+
+.hamburger.transparent {
+    opacity: 0.6;
 }
 
 /* Responsive Styles */

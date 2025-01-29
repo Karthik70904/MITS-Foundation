@@ -842,8 +842,8 @@ button:hover {
 
     .text-block h2,
     .innovation-section h2 {
-        font-size: 1.7rem !important;
-        white-space: normal;
+        font-size: 1.5rem !important;
+        white-space: nowrap;
     }
 
     .content-o h1{

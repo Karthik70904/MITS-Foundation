@@ -291,3 +291,34 @@ textarea {
 	display: none;
     transition: all 0.3s;
 }
+
+@media screen and (max-width: 600px) {
+	.contact-header h2{
+		font-size: 1.8rem;
+	}
+
+	.contact-header p{
+		font-size: 1rem;
+	}
+
+	.contact-info a, .address-info h3{
+		font-size: 1rem !important;
+	}
+
+	.address-info p{
+		font-size: 0.7rem;
+	}
+
+	.faqs{
+		width: 100%;
+		padding: 10px;
+	}
+
+	.faq{
+		width: 100% !important;
+	}
+
+	.faq h2{
+		align-items: center;
+	}
+}

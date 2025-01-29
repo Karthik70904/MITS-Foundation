@@ -5,10 +5,10 @@
     --white: #ffffff;
 }
 
-#nav-portfolio{
-	color: var(--primary-color);
-	font-weight: 700;
-	font-size: 1rem;
+#nav-portfolio {
+    color: var(--primary-color);
+    font-weight: 700;
+    font-size: 1rem;
 }
 
 body {
@@ -35,23 +35,10 @@ body {
     margin-bottom: 2rem;
 }
 
-
 .company-logos img {
-    height: 60px;
-    object-fit: fill;
-}
-
-.company-logos {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin-bottom: 2rem;
-}
-
-.company-logos img {
-    height: 40px; /* Decreased the height */
-    width: 40px;  /* Added width */
-    object-fit: cover; /* Changed object-fit to cover */
+    height: 40px;
+    width: 40px;
+    object-fit: cover;
 }
 
 /* Esteemed Partner Section */
@@ -67,38 +54,42 @@ body {
 
 /* Incubated Companies Section */
 .incubated-companies {
-    padding: 4rem 5%;
-    background: #FBF7F7;
+    padding: 60px 40px;
+    background-color: #fff5f3;
     position: relative;
     text-align: center;
+    border-radius: 36px;
+    max-width: 1200px;
+    margin: 0 auto 2rem;
+    border: 3.5px solid #2a74c8;
 }
 
 .incubated-companies h2 {
     color: var(--primary-color);
-    font-size: 2rem;
-    margin-bottom: 0.5rem;
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 8px;
 }
 
-.incubated-companies p {
+.subtitle {
     color: #666;
-    margin-bottom: 2rem;
-    font-size: 0.9rem;
+    font-size: 14px;
+    margin-bottom: 40px;
 }
 
 .companies-container {
-    margin: 2rem auto;
-    max-width: 1200px;
+    max-width: 1500px;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 20px;
 }
 
 .company-card {
     background: var(--white);
-    padding: 0 3rem;
+    padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.353), 0 0 10px rgba(0, 0, 0, 0.1); /* Added border shadow */
-    border: 1px solid #1d549282;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.353), 0 0 10px rgba(0, 0, 0, 0.1);
     display: flex;
     gap: 2rem;
     align-items: center;
@@ -112,9 +103,9 @@ body {
 }
 
 .company-card img {
-    width: 80px; /* Decreased the width */
-    height: 80px; /* Set a fixed height */
-    object-fit: cover; /* Changed object-fit to cover */
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
     margin-right: 2rem;
 }
 
@@ -134,19 +125,31 @@ body {
     font-size: 0.85rem;
     line-height: 1.5;
     margin-bottom: 1rem;
-    text-align: left;
 }
 
 .know-more {
     background: var(--primary-color);
     color: var(--white);
-    border: none;
+    border: 2px solid var(--primary-color);
     padding: 0.5rem 1.5rem;
     border-radius: 5px;
-    cursor: pointer;
     font-size: 0.85rem;
     font-weight: 500;
-    margin-left: 60px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.know-more:hover {
+    background: var(--white);
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    font-weight: 700;
+    border-radius: 10px;
 }
 
 .navigation-arrows {
@@ -155,6 +158,37 @@ body {
     gap: 1rem;
     margin-top: 1.5rem;
 }
+
+.navigation {
+    display: flex;
+    gap: 8rem;
+    justify-content: end;
+    align-items: flex-end;
+    margin-top: 1.5rem;
+}
+
+.nav-btn {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: #1E4C9A;
+    color: white;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.nav-btn:hover {
+    background: whitesmoke;
+    color: var(--primary-color);
+    transform: translateY(-1px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
 
 .navigation-arrows button {
     background: var(--primary-color);
@@ -189,173 +223,20 @@ body {
     padding: 1rem;
 }
 
-
-.incubated-companies {
-    background-color: #fff5f3;
-    padding: 60px 40px;
-    position: relative;
-    border-radius: 36px;
-    max-width: 1200px; /* Set a max-width to decrease the width */
-    margin: 0 auto; /* Center the section */
-    border: 3.5px solid #1d5392;
-    margin-bottom: 2rem;
-}
-
-.incubated-companies h2 {
-    color: #1E4C9A;
-    font-size: 32px;
-    font-weight: 600;
-    text-align: center;
-    margin-bottom: 8px;
-}
-
-.subtitle {
-    color: #666;
-    font-size: 14px;
-    text-align: center;
-    margin-bottom: 40px;
-}
-
-.companies-container {
-    max-width: 1500px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.company-logo {
-    flex-shrink: 0;
-    width: 200px; /* Decreased the width */
-    height: 200px; /* Decreased the height */
-    margin: 0 auto; /* Center the logo */
-    display: flex; /* Added flexbox */
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-    padding: 0 10px;
-}
-
-.company-logo img {
-    width: 100%;
-    height: auto;
-    object-fit: contain;
-}
-
-.company-info {
-    flex: 1;
-}
-
-.company-info h3 {
-    color: #1E4C9A;
-    font-size: 18px;
-    font-weight: 600;
-    margin-bottom: 12px;
-}
-
-.company-info p {
-    color: #666;
-    font-size: 14px;
-    line-height: 1.6;
-    margin-bottom: 20px;
-}
-
-.know-more {
-    background: #1E4C9A;
-    color: white;
-    border: 2
-    px solid #1E4C9A;
-    padding: 8px 24px;
-    border-radius: 5px;
-    font-size: 14px;
-    font-weight: 500;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    position: absolute; /* Added absolute positioning */
-    bottom: 40px; /* Positioned at the bottom */
-    left: 25%; /* Center horizontally */
-    transform: translateX(-50%); /* Center horizontally */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Added shadow */
-}
-
-.know-more:hover {
-    background: #163c7a;
-}
-
-.navigation {
-    display: flex;
-    justify-content: right;
-    gap: 150px;
-    margin-top: 30px;
-
-}
-.navigation {
-    display: flex;
-    justify-content: right;
-    gap: 150px;
-    margin-top: 30px;
-    padding: 0 20px; /* Add padding to give a gap from the border */
-}
-
-.nav-btn {
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    background: #1E4C9A;
-    color: white;
-    border: none;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 16px;
-    transition: background-color 0.3s;
-}
-
-.nav-btn:hover {
-    background: #163c7a;
-}
-
-@media (max-width: 768px) {
-    .incubated-companies {
-        padding: 40px 20px;
-    }
-
-    .company-card {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        padding: 20px;
-    }
-
-    .company-logo {
-        width: 100px;
-        margin-bottom: 20px;
-    }
-
-    .company-info h3 {
-        font-size: 16px;
-    }
-
-    .company-info p {
-        font-size: 13px;
-    }
-}
 .success-stories-s {
     background-color: #D6E4F0;
     text-align: center;
     max-width: 100%;
-    margin: 0 auto;
+    margin: 0 auto 5rem;
     overflow: hidden;
     padding: 0 2rem;
-    margin-bottom: 5rem;
     margin-top: 2rem;
 }
 
 h1 {
     color: #1e3a8a;
     font-size: 2.5rem;
-    margin-bottom: 0.5rem;
-    margin-top: 3rem;
+    margin: 3rem 0 0.5rem;
 }
 
 .subtitle-s {
@@ -412,7 +293,7 @@ h1 {
 .company-logo-s img {
     width: 100%;
     height: 100%;
-    object-fit: flex;
+    object-fit: cover;
     border-radius: 0.5rem;
 }
 
@@ -452,20 +333,20 @@ h1 {
     body {
         padding: 1rem;
     }
-    
+
     .success-stories-s {
         padding: 0 1rem;
     }
-    
+
     h1 {
         font-size: 2rem;
     }
-    
+
     .card-s {
         width: 280px;
         padding: 1.5rem;
     }
-    
+
     @keyframes scroll {
         0% {
             transform: translateX(0);
@@ -480,17 +361,17 @@ h1 {
     h1 {
         font-size: 1.75rem;
     }
-    
+
     .subtitle-s {
         font-size: 0.9rem;
         margin-bottom: 2rem;
     }
-    
+
     .card-s {
         width: 260px;
         padding: 1.25rem;
     }
-    
+
     @keyframes scroll {
         0% {
             transform: translateX(0);

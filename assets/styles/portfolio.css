@@ -198,6 +198,7 @@ body {
     max-width: 1200px; /* Set a max-width to decrease the width */
     margin: 0 auto; /* Center the section */
     border: 3.5px solid #1d5392;
+    margin-bottom: 2rem;
 }
 
 .incubated-companies h2 {

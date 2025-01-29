@@ -107,11 +107,11 @@
             let companies = [];
             let currentIndex = 0;
             const companiesPerPage = 4;
-    
+            
             document.addEventListener('DOMContentLoaded', function() {
                 const prevButton = document.querySelector('.nav-btn.prev');
                 const nextButton = document.querySelector('.nav-btn.next');
-    
+                const companiesContainer = document.querySelector('.companies-container');
                 prevButton.addEventListener('click', function() {
                     if (currentIndex > 0) {
                             currentIndex--;
@@ -119,6 +119,8 @@
                         currentIndex = Math.ceil(companies.length / companiesPerPage) - 1; // Set to the last page
                     }
                         renderCompanies();
+                        companiesContainer.scrollIntoView({ behavior: 'smooth' });
+                        
                 });
     
                 nextButton.addEventListener('click', function() {
@@ -128,6 +130,7 @@
                         currentIndex = 0;
                     }
                         renderCompanies();
+                        companiesContainer.scrollIntoView({ behavior: 'smooth' });
                 });
             });
         </script>

@@ -386,8 +386,15 @@ h1 {
     .company-card{
         flex-direction: column;
     }
+
     .know-more{
         position: static;
         transform: none;
+    }
+
+    .company-card img{
+        margin: 0;
+        width: auto;
+        height: 40px;
     }
 }

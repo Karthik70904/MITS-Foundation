@@ -381,3 +381,13 @@ h1 {
         }
     }
 }
+
+@media screen and (max-width: 600px) {
+    .company-card{
+        flex-direction: column;
+    }
+    .know-more{
+        position: static;
+        transform: none;
+    }
+}

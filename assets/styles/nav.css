@@ -61,6 +61,10 @@ body {
 .logo img {
     height: 100px;
     width: auto;
+    z-index: 10000;
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: middle;
 }
 
 

@@ -44,3 +44,11 @@ function toggleMenu() {
     document.querySelector('.hamburger i').classList.toggle('bi-x');
     // console.log(navLinks.classList);
 }
+
+// for logo click
+function handleLogoClick(url) {
+    if (url === 'index.html')
+        window.location.href = url;
+    else
+        window.open(url, '_blank');
+}

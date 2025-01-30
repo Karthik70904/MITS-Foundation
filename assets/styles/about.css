@@ -613,7 +613,7 @@ textarea:focus {
 	box-shadow: 0 0 0 2px rgba(66, 153, 225, 0.1);
 }
 
-button {
+.sub-btn {
     background-color: var(--primary-color);
     color: white;
     padding: 8px 50px;
@@ -625,7 +625,7 @@ button {
     width: auto;
 }
 
-button:hover {
+.sub-btn:hover {
     color: var(--primary-color);
 	background-color: white;
 }
@@ -673,7 +673,7 @@ button:hover {
 		display: none;
 	}
 
-	button{
+	.sub-btn{
 		width: 90%;
 		padding: 8px 30px;
 	}

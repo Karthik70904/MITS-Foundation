@@ -647,6 +647,8 @@ button:hover {
 @media screen and (max-width: 768px) {
     .volunteer-section-v {
         flex-direction: column;
+		align-items: center;
+		justify-content: center;
         padding: 20px;
         gap: 20px;
     }
@@ -670,7 +672,9 @@ button:hover {
 	.volunteer-section-v::before {
 		display: none;
 	}
+
 	button{
+		width: 90%;
 		padding: 8px 30px;
 	}
 }

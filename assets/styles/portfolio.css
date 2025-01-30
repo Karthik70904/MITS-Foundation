@@ -37,7 +37,7 @@ body {
 
 .company-logos img {
     height: 40px;
-    width: 40px;
+    width: auto;
     object-fit: cover;
 }
 
@@ -103,14 +103,15 @@ body {
 }
 
 .company-card img {
-    width: 80px;
-    height: 80px;
+    width: 160px;
+    height: auto;
     object-fit: cover;
     margin-right: 2rem;
 }
 
 .company-info {
     flex: 1;
+    min-width: 500px;
 }
 
 .company-info h3 {
@@ -161,7 +162,7 @@ body {
 
 .navigation {
     display: flex;
-    gap: 8rem;
+    gap: 4rem;
     justify-content: end;
     align-items: flex-end;
     margin-top: 1.5rem;
@@ -347,6 +348,12 @@ h1 {
         padding: 1.5rem;
     }
 
+    .navigation {
+        gap: 10rem;
+        justify-content: center;
+        align-items: center;
+    }
+
     @keyframes scroll {
         0% {
             transform: translateX(0);
@@ -385,11 +392,24 @@ h1 {
 @media screen and (max-width: 600px) {
     .company-card{
         flex-direction: column;
+        text-align: center;
     }
 
     .know-more{
         position: static;
         transform: none;
+        margin-top: 1rem;
+        align-items: center;
+    }
+
+    .company-info{
+        min-width: auto;
+        text-align: left;
+    }
+
+    .company-info p{
+        font-size: 0.75rem;
+        line-height: 1.4;
     }
 
     .company-card img{

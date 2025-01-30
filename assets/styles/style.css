@@ -406,8 +406,17 @@ body {
 
 @media screen and (max-width: 600px) {
 	.hero h1 {
+		position: relative;
 		font-size: 1.8rem;
 		padding: 0;
+		border: none;
+		top: 0;
+		left: 1rem;
+		margin: 0;
+	}
+
+	.hero h1::before, .hero h1::after{
+		display: none;
 	}
 
 	.hero {
@@ -416,9 +425,27 @@ body {
 		padding: 5rem 0 0 0;
 	}
 
+	.hero-content{
+		border: none;
+	}
+
 	.slider-container {
 		aspect-ratio: 16/9 !important;
 		height: auto;
+		border: 5px solid var(--primary-color);
+	}
+
+	.slider img{
+		border-radius: 5px;
+	}
+
+	.slider-controls button{
+		width: 40px;
+		aspect-ratio: 1;
+	}
+
+	.slider-controls i{
+		font-size: 15px;
 	}
 
 	.vision-mission h2 {

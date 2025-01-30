@@ -58,7 +58,7 @@ main {
 }
 
 .info-block * {
-	width: 47.5%;
+	width: 100%;
 }
 
 .text-block {
@@ -72,12 +72,12 @@ main {
 .content-grid {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
-	/* gap: 2rem; */
 	margin: 3rem 0;
 	gap: 5%;
 }
 
 .building-img {
+	align-items: center;
 	width: 100%;
 	border-radius: 20px;
 	box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Add a blurred shadow to blend the edges */
@@ -479,7 +479,7 @@ header p {
 .objective-right-o .objective-content-o p {
 	padding-right: 0;
 	padding-left: 20%;
-	text-align: right;
+	text-align: right; 
 }
 
 /* Responsive design */
@@ -613,7 +613,7 @@ textarea:focus {
 	box-shadow: 0 0 0 2px rgba(66, 153, 225, 0.1);
 }
 
-button {
+.sub-btn {
     background-color: var(--primary-color);
     color: white;
     padding: 8px 50px;
@@ -625,7 +625,7 @@ button {
     width: auto;
 }
 
-button:hover {
+.sub-btn:hover {
     color: var(--primary-color);
 	background-color: white;
 }
@@ -647,6 +647,8 @@ button:hover {
 @media screen and (max-width: 768px) {
     .volunteer-section-v {
         flex-direction: column;
+		align-items: center;
+		justify-content: center;
         padding: 20px;
         gap: 20px;
     }
@@ -670,7 +672,9 @@ button:hover {
 	.volunteer-section-v::before {
 		display: none;
 	}
-	button{
+
+	.sub-btn{
+		width: 90%;
 		padding: 8px 30px;
 	}
 }
@@ -769,7 +773,7 @@ button:hover {
 	}
 
 	.info-block {
-		flex-direction: column-reverse;
+		flex-direction: column;
 	}
 
 	.info-block > * {
@@ -836,9 +840,17 @@ button:hover {
         flex-direction: column;
     }
 
-    .info-block > * {
-        width: 90%;
-    }
+	.info-block p{
+		margin-bottom: 5%;
+	}
+
+	.image-block {
+		/* margin-top: 5%; */
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
 
     .text-block h2,
     .innovation-section h2 {
@@ -851,7 +863,7 @@ button:hover {
     }
 
     .content-o p{
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
 
     .icon-o{
@@ -875,7 +887,7 @@ button:hover {
     }
 
     .objective-content-o p{
-        font-size: 1rem;
+        font-size: 0.95rem;
     }
 
     .objective-left-o .objective-content-o p {

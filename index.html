@@ -23,9 +23,9 @@
             </h1>
             <div class="slider-container">
                 <div class="slider">
-                    <img src="assets/home/11.jpg" alt="Campus" class="slide">
-                    <img src="assets/home/12.jpg" alt="Campus 2" class="slide">
-                    <img src="assets/home/13.jpg" alt="Campus 3" class="slide">
+                    <img src="assets\images\Home\11.jpg" alt="Campus" class="slide">
+                    <img src="assets\images\Home\12.jpg" alt="Campus 2" class="slide">
+                    <img src="assets\images\Home\13.jpg" alt="Campus 3" class="slide">
                     <div class="slider-controls">
                         <button class="prev" onclick="plusSlides(-1)"><i class="bi bi-arrow-left"></i></button>
                         <button class="next" onclick="plusSlides(1)"><i class="bi bi-arrow-right"></i></button>
@@ -54,8 +54,8 @@
 
     <!-- Thrust Areas -->
     <section class="thrust-areas">
-        <img src="assets/images/Structure.png" alt="" class="thrust-bg-addon addon-1">
-        <img src="assets/images/Structure.png" alt="" class="thrust-bg-addon addon-2">
+        <img src="assets/images/Structure/Structure.png" alt="" class="thrust-bg-addon addon-1">
+        <img src="assets/images/Structure/Structure.png" alt="" class="thrust-bg-addon addon-2">
         <h2>Thrust Areas</h2>
         <p class="subtitle">Our key thrust areas include:</p>
         <div class="areas-grid">
@@ -158,33 +158,71 @@
     <!-- Portfolio -->
     <section class="portfolio" id="portfolio">
         <h2>Portfolio</h2>
-        <div class="portfolio-grid">
-            <img src="https://placehold.co/200x80" alt="MOTOL">
-            <img src="https://placehold.co/200x80" alt="Pragyashal">
-            <img src="https://placehold.co/200x80" alt="Algain">
-            <img src="https://placehold.co/200x80" alt="Data Elegance">
-            <img src="https://placehold.co/200x80" alt="Tech Company">
+        <div class="portfolio-slider-container">
+            <div class="portfolio-slider" id="portfolio-slider">
+                <!-- Portfolio items will be loaded here -->
+            </div>
         </div>
-
+        <div class="portfolio-dots" id="portfolio-dots">
+            <!-- Dots will be loaded here -->
+        </div>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                fetch('assets/JSON/portfolio.json')
+                    .then(response => response.json())
+                    .then(data => {
+                        const portfolioSlider = document.getElementById('portfolio-slider');
+                        const portfolioDots = document.getElementById('portfolio-dots');
+                        
+                        data.portfolio.forEach((item, index) => {
+                            // Create and append image elements
+                            const img = document.createElement('img');
+                            img.src = item.src;
+                            img.alt = item.alt;
+                            img.className = 'portfolio-slide';
+                            portfolioSlider.appendChild(img);
         
-
-        <div class="portfolio-dots">
-            <span class="dot active"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
-        </div>
+                            // Create and append dot elements
+                            const dot = document.createElement('span');
+                            dot.className = 'dot';
+                            if (index === 0) {
+                                dot.classList.add('active');
+                            }
+                            portfolioDots.appendChild(dot);
+                        });
+        
+                        // Initialize the slider
+                        let currentIndex = 0;
+                        const slides = document.querySelectorAll('.portfolio-slide');
+                        const dots = document.querySelectorAll('.dot');
+        
+                        function showSlide(index) {
+                            slides.forEach((slide, i) => {
+                                slide.style.display = i === index ? 'block' : 'none';
+                                dots[i].classList.toggle('active', i === index);
+                            });
+                        }
+        
+                        function nextSlide() {
+                            currentIndex = (currentIndex + 1) % slides.length;
+                            showSlide(currentIndex);
+                        }
+        
+                        showSlide(currentIndex);
+                        setInterval(nextSlide, 2000);
+                    })
+                    .catch(error => console.error('Error loading portfolio:', error));
+            });
+        </script>
     </section>
+    
+    
 
     <script src="assets/JS/components.js" defer></script>
     <script src="assets/JS/script.js" defer></script>
     <script>
       window.onload = () => {
-          document.querySelector('#nav-portfolio').style.color = '#1a4b8c';
+          document.querySelector('#nav-home').style.color = '#1a4b8c';
       }
     </script>
 </body>

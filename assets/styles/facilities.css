@@ -148,8 +148,8 @@ body {
 }
 
 .facility-icon img {
-    width: 32px;
-    height: 32px;
+    width: 52px;
+    height: 52px;
     transition: transform 0.3s ease;
 }
 
@@ -191,113 +191,6 @@ body {
     right: 0;
 }
 
-
-
-/* .facilities-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.facility-card {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    background: #f9f9f9;
-    padding: 1.5rem;
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
-    overflow: hidden;
-}
-
-.facility-card:hover {
-    transform: translateY(-5px);
-    background: #0047AB;
-    color: #fff;
-}
-
-.facility-icon img {
-    width: 32px;
-    height: 32px;
-    margin-bottom: 1rem;
-    transition: transform 0.3s ease;
-}
-
-.facility-card:hover .facility-icon img {
-    transform: scale(1.1);
-    filter: brightness(0) invert(1);
-}
-
-.facility-title {
-    font-size: 1.2rem;
-    font-weight: 600;
-    color: var(--primary);
-    transition: color 0.3s ease;
-}
-
-.facility-card:hover .facility-title {
-    color: #fff;
-}
-
-.facility-desc {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: #D6E4F0;
-    color: var(--primary-color);
-    padding: 1rem;
-    font-size: 1rem;
-    opacity: 0;
-    transform: translateY(100%);
-    transition: opacity 0.3s ease, transform 0.3s ease;
-}
-
-.facility-card:hover .facility-desc {
-    opacity: 1;
-    transform: translateY(0);
-} */
-
-/* .facilities-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.facility-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    background: #f9f9f9;
-    padding: 1.5rem;
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-}
-
-.facility-card:hover {
-    transform: translateY(-5px);
-}
-
-.facility-icon img {
-    width: 32px;
-    height: 32px;
-    margin-bottom: 1rem;
-}
-
-.facility-card p {
-    font-size: 1.2rem;
-    font-weight: 600;
-    color: var(--primary);
-} */
 
 /* Responsive Design */
 @media (max-width: 1024px) {

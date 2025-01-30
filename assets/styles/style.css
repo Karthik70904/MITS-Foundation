@@ -329,6 +329,7 @@ body {
 	padding: 4rem 2rem;
 	background-color: var(--secondary-color);
 	text-align: center;
+	align-items: center;
 }
 
 .portfolio h2 {
@@ -364,18 +365,43 @@ body {
 	gap: 0.5rem;
 }
 
+.portfolio-slider-container {
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.portfolio-slider {
+    display: flex;
+	align-items: center;
+	justify-content: center;
+    transition: transform 0.5s ease-in-out;
+}
+
+.portfolio-slide {
+    min-width: 70%;
+    display: none;
+}
+
+.portfolio-dots {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
 .dot {
-	width: 10px;
-	height: 10px;
-	background: #ccc;
-	border-radius: 50%;
-	cursor: pointer;
-	transform: scale(0.8);
+    width: 10px;
+    height: 10px;
+    background: #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+    transform: scale(0.8);
 }
 
 .dot.active {
-	background: var(--primary-color);
-	transform: scale(1.1);
+    background: var(--primary-color);
+    transform: scale(1.1);
 }
 
 @media screen and (max-width: 600px) {

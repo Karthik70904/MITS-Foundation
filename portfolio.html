@@ -15,31 +15,72 @@
 
 <body>
 
-    <section class="raising-stars">
+    <section class="raising-stars" id="portfolio">
         <h2 style="color: var(--primary-color);">Our Raising Stars</h2>
         <div class="companies-slider">
-            <div class="company-logos">
-                <img src="https://iitm-foundation.org/images/motol.png" alt="Motol">
-                <img src="https://iitm-foundation.org/images/pragyashal.png" alt="Pragyashal">
-                <img src="https://iitm-foundation.org/images/algain.png" alt="Algain">
-                <img src="https://iitm-foundation.org/images/aurv.png" alt="Aurv">
-                <img src="https://iitm-foundation.org/images/gyaantrix.png" alt="Gyaantrix">
+            <div class="company-logos" id="company-logos">
+                <!-- Company logos will be loaded here -->
             </div>
-            <div class="slider-dots">
-                <span class="dot"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
+            <div class="slider-dots" id="slider-dots">
+                <!-- Dots will be loaded here -->
             </div>
         </div>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                fetch('assets/JSON/portfolio.json')
+                    .then(response => response.json())
+                    .then(data => {
+                        const portfolioSlider = document.getElementById('company-logos');
+                        const portfolioDots = document.getElementById('slider-dots');
+                        
+                        data.portfolio.forEach((item, index) => {
+                            // Create and append image elements
+                            const img = document.createElement('img');
+                            img.src = item.src;
+                            img.alt = item.alt;
+                            img.className = 'company-logo';
+                            portfolioSlider.appendChild(img);
+        
+                            // Create and append dot elements
+                            const dot = document.createElement('span');
+                            dot.className = 'dot';
+                            if (index === 0) {
+                                dot.classList.add('active');
+                            }
+                            portfolioDots.appendChild(dot);
+                        });
+        
+                        // Initialize the slider
+                        let currentIndex = 0;
+                        const slides = document.querySelectorAll('.company-logo');
+                        const dots = document.querySelectorAll('.dot');
+        
+                        function showSlide(index) {
+                            slides.forEach((slide, i) => {
+                                slide.style.display = i === index ? 'block' : 'none';
+                                dots[i].classList.toggle('active', i === index);
+                            });
+                        }
+        
+                        function nextSlide() {
+                            currentIndex = (currentIndex + 1) % slides.length;
+                            showSlide(currentIndex);
+                        }
+        
+                        showSlide(currentIndex);
+                        setInterval(nextSlide, 2000);
+                    })
+                    .catch(error => console.error('Error loading portfolio:', error));
+            });
+        </script>
     </section>
+    
 
     <section class="esteemed-partner">
         <h2 style="color: var(--primary-color);">Our Esteemed Partner</h2>
         <p>Collaborating with Industry leaders to foster Innovation</p>
         <div class="partner-logo">
-            <img src="assets/company/MSME_logo.png" alt="MSME">
+            <img src="assets\images\logos\MSME_logo.jpeg" alt="MSME">
         </div>
     </section>
 

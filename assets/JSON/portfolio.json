@@ -1,0 +1,12 @@
+{
+  "portfolio": [
+    { "src": "assets/images/Portfolio/company/motol.png", "alt": "MOTOL" },
+    { "src": "assets/images/Portfolio/company/pragyashal.png", "alt": "Pragyashal" },
+    { "src": "assets/images/Portfolio/company/algain.png", "alt": "Algain" },
+    { "src": "assets/images/Portfolio/company/Aurv_organics.png", "alt": "Aurv Organics" },
+    { "src": "assets/images/Portfolio/company/gyaantrix.jpg", "alt": "Gyaantrix" },
+    {"src":"assets/images/Portfolio/company/hexaind.png","alt":"Hexaind Technologies"},
+    {"src":"assets/images/Portfolio/company/creomind.png","alt":"Creomind Innovations"},
+    {"src":"assets/images/Portfolio/company/HBtech.png","alt":"Harebin Tech solutions"}
+  ]
+}

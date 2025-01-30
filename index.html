@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MITS Foundation</title>
-    <link rel="shortcut icon" href="assets/images/logo1.png" type="image/x-icon">
+    <link rel="shortcut icon" href="assets/images/logos/MITS_Foundation_logo.png" type="image/x-icon">
     <link rel="stylesheet" href="assets/styles/style.css">
     <link rel="stylesheet" href="assets/styles/nav.css">
     <link rel="stylesheet" href="assets/styles/footer.css">
@@ -54,8 +54,8 @@
 
     <!-- Thrust Areas -->
     <section class="thrust-areas">
-        <img src="assets/images/Structure.png" alt="" class="thrust-bg-addon addon-1">
-        <img src="assets/images/Structure.png" alt="" class="thrust-bg-addon addon-2">
+        <img src="assets/images/Structure/Structure.png" alt="" class="thrust-bg-addon addon-1">
+        <img src="assets/images/Structure/Structure.png" alt="" class="thrust-bg-addon addon-2">
         <h2>Thrust Areas</h2>
         <p class="subtitle">Our key thrust areas include:</p>
         <div class="areas-grid">
@@ -188,6 +188,9 @@
                             if (index === 0) {
                                 dot.classList.add('active');
                             }
+                            dot.addEventListener('click', () => {
+                                showSlide(index);
+                            });
                             portfolioDots.appendChild(dot);
                         });
         
@@ -209,7 +212,7 @@
                         }
         
                         showSlide(currentIndex);
-                        setInterval(nextSlide, 2000);
+                        setInterval(nextSlide, 3500);
                     })
                     .catch(error => console.error('Error loading portfolio:', error));
             });

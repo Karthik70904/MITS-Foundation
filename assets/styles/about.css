@@ -837,7 +837,7 @@ textarea:focus {
     }
 
     .info-block {
-        flex-direction: column;
+        flex-direction: column-reverse;
     }
 
 	.info-block p{

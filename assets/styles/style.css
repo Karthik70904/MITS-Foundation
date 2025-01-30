@@ -38,10 +38,10 @@ body {
 
 .hero-content {
 	/* max-width: 90%; */
-	border: 4px solid var(--primary-color);
+	border: 5px solid var(--primary-color);
 	margin: 0 auto;
 	position: relative;
-	border-radius: 15px;
+	border-radius: 50px;
 	box-shadow: 0 20px 20px -20px var(--primary-color);
 }
 
@@ -54,13 +54,13 @@ body {
 	background-color: var(--secondary-color);
 	padding: 0.5rem;
 	border-top-left-radius: 10px;
-	border-bottom-right-radius: 15px;
+	border-bottom-right-radius: 50px;
 	border-top: 10px solid var(--secondary-color);
 	border-left: 10px solid var(--secondary-color);
 	border-bottom: 5px solid var(--primary-color);
 	border-right: 5px solid var(--primary-color);
-	top: -4px;
-	left: -4px;
+	top: -5px;
+	left: -5px;
 }
 
 .curves {
@@ -70,36 +70,36 @@ body {
 .hero h1::before {
 	position: absolute;
 	content: "";
-	width: 15px;
+	width: 55px;
 	aspect-ratio: 1;
 	background: radial-gradient(
 		circle at 100% 100%,
 		transparent,
-		transparent 11.5px,
-		var(--primary-color) 11px,
-		var(--primary-color) 17px,
-		var(--secondary-color) 17px
+		transparent 50px,
+		var(--primary-color) 50px,
+		var(--primary-color) 55px,
+		var(--secondary-color) 55px
 	);
 	/* background-color: red; */
 	z-index: 1000;
 	top: -10px;
-	right: -15px;
+	right: -55px;
 }
 .hero h1::after {
 	position: absolute;
 	content: "";
-	width: 15px;
+	width: 55px;
 	aspect-ratio: 1;
 	background: radial-gradient(
 		circle at 100% 100%,
 		transparent,
-		transparent 10.5px,
-		var(--primary-color) 10px,
-		var(--primary-color) 14.5px,
-		var(--secondary-color) 14px
+		transparent 50px,
+		var(--primary-color) 50px,
+		var(--primary-color) 55px,
+		var(--secondary-color) 55px
 	);
 	z-index: 1000;
-	bottom: -14px;
+	bottom: -55px;
 	left: -10px;
 }
 
@@ -121,6 +121,7 @@ body {
 	display: block;
 	object-fit: cover;
 	border-radius: 10px;
+	border-radius: 45px;
 }
 
 .slider-controls {
@@ -406,8 +407,17 @@ body {
 
 @media screen and (max-width: 600px) {
 	.hero h1 {
+		position: relative;
 		font-size: 1.8rem;
 		padding: 0;
+		border: none;
+		top: 0;
+		left: 1rem;
+		margin: 0;
+	}
+
+	.hero h1::before, .hero h1::after{
+		display: none;
 	}
 
 	.hero {
@@ -416,9 +426,27 @@ body {
 		padding: 5rem 0 0 0;
 	}
 
+	.hero-content{
+		border: none;
+	}
+
 	.slider-container {
 		aspect-ratio: 16/9 !important;
 		height: auto;
+		border: 5px solid var(--primary-color);
+	}
+
+	.slider img{
+		border-radius: 5px;
+	}
+
+	.slider-controls button{
+		width: 40px;
+		aspect-ratio: 1;
+	}
+
+	.slider-controls i{
+		font-size: 15px;
 	}
 
 	.vision-mission h2 {

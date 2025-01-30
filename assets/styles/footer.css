@@ -228,9 +228,6 @@ iframe {
 }
 
 @media screen and (max-width: 600px) {
-	.footer-left img {
-		align-self: center;
-	}
 
 	.foundation-info h2 {
 		font-size: 1.5rem;

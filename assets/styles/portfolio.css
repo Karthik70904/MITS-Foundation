@@ -22,23 +22,47 @@ body {
 }
 
 .companies-slider {
-    margin-top: 3rem;
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+    margin-top: 2rem;
     background: var(--secondary-color);
-    padding: 3rem;
+    padding: 2rem;
     border-radius: 10px;
+    align-items: center;
+    justify-content: center;
 }
 
 .company-logos {
     display: flex;
-    justify-content: space-around;
     align-items: center;
-    margin-bottom: 2rem;
+    justify-content: center;
+    transition: transform 0.5s ease-in-out;
 }
 
-.company-logos img {
-    height: 40px;
-    width: auto;
-    object-fit: cover;
+.company-logo {
+    min-width: 70%;
+}
+
+.slider-dots {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    background: #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+    transform: scale(0.8);
+}
+
+.dot.active {
+    background: var(--primary-color);
+    transform: scale(1.1);
 }
 
 /* Esteemed Partner Section */
@@ -189,7 +213,6 @@ body {
     transform: translateY(-1px);
     box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
 }
-
 
 .navigation-arrows button {
     background: var(--primary-color);

@@ -837,12 +837,9 @@ textarea:focus {
     }
 
     .info-block {
-        flex-direction: column;
+        flex-direction: column-reverse;
     }
 
-    .info-block > * {
-        width: 90%;
-    }
 
     .text-block h2,
     .innovation-section h2 {

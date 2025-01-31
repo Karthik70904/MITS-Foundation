@@ -362,7 +362,10 @@
   <script src="assets/JS/components.js" defer></script>
   <script>
     window.onload = () => {
-      document.querySelector('#nav-about').style.color = '#1a4b8c';
+      const navAbout = document.querySelector('#nav-about');
+      if (navAbout) {
+        navAbout.style.color = '#1a4b8c';
+      }
     }
   </script>
 </body>

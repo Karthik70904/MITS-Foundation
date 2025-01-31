@@ -318,3 +318,34 @@ body {
 		align-items: center;
 	}
 }
+
+/* Add this to your existing CSS file */
+.download-btn {
+    box-shadow: #fff;
+    background-color: #2b579a;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1rem;
+}
+
+.download-btn:hover {
+    background-color: #1e3f7a;
+}
+
+.download-btn i {
+    margin-right: 0.5rem;
+}
+
+/* Mobile responsive styles */
+@media (max-width: 600px) {
+    .download-btn {
+        padding: 0.5rem;
+        font-size: 0.875rem;
+    }
+}

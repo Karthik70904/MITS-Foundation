@@ -1,0 +1,19 @@
+{
+  "downloads": [
+    {
+      "title": "Sample Report",
+      "fileInfo": "Annual financial report 2023 • 2.5 MB",
+      "filePath": "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf"
+    },
+    {
+      "title": "Project Proposal",
+      "fileInfo": "Business proposal template • 1.2 MB",
+      "filePath": "https://file-examples.com/storage/fe8c7eef0c6364f6c9504cc/2017/02/file-sample_100kB.docx"
+    },
+    {
+      "title": "User Guide",
+      "fileInfo": "Product documentation • 3.1 MB",
+      "filePath": "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf"
+    }
+  ]
+}

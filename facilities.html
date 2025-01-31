@@ -129,7 +129,10 @@
     <script src="assets/JS/components.js" defer></script>
     <script>
         window.onload = () => {
-            document.querySelector('#nav-facilities').style.color = '#1a4b8c';
+            const navFacilities = document.querySelector('#nav-facilities');
+            if (navFacilities) {
+                navFacilities.style.color = '#1a4b8c';
+            }
         }
     </script>
 

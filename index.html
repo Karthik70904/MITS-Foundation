@@ -181,7 +181,7 @@
                             img.alt = item.alt;
                             img.className = 'portfolio-slide';
                             portfolioSlider.appendChild(img);
-        
+    
                             // Create and append dot elements
                             const dot = document.createElement('span');
                             dot.className = 'dot';
@@ -189,30 +189,33 @@
                                 dot.classList.add('active');
                             }
                             dot.addEventListener('click', () => {
-                                showSlide(index);
+                                currentIndex = index;
+                                showSlide(currentIndex);
+                                clearInterval(slideInterval);
+                                slideInterval = setInterval(nextSlide, 3500);
                             });
                             portfolioDots.appendChild(dot);
                         });
-        
+    
                         // Initialize the slider
                         let currentIndex = 0;
                         const slides = document.querySelectorAll('.portfolio-slide');
                         const dots = document.querySelectorAll('.dot');
-        
+    
                         function showSlide(index) {
                             slides.forEach((slide, i) => {
                                 slide.style.display = i === index ? 'block' : 'none';
                                 dots[i].classList.toggle('active', i === index);
                             });
                         }
-        
+    
                         function nextSlide() {
                             currentIndex = (currentIndex + 1) % slides.length;
                             showSlide(currentIndex);
                         }
-        
+    
                         showSlide(currentIndex);
-                        setInterval(nextSlide, 3500);
+                        let slideInterval = setInterval(nextSlide, 3500);
                     })
                     .catch(error => console.error('Error loading portfolio:', error));
             });
@@ -225,7 +228,10 @@
     <script src="assets/JS/script.js" defer></script>
     <script>
       window.onload = () => {
-          document.querySelector('#nav-home').style.color = '#1a4b8c';
+          const navHome = document.querySelector('#nav-home');
+          if (navHome) {
+              navHome.style.color = '#1a4b8c';
+          }
       }
     </script>
 </body>

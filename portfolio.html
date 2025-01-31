@@ -48,7 +48,10 @@
                                 dot.classList.add('active');
                             }
                             dot.addEventListener('click', () => {
-                                showSlide(index);
+                                currentIndex = index;
+                                showSlide(currentIndex);
+                                clearInterval(slideInterval);
+                                slideInterval = setInterval(nextSlide, 3500);
                             });
                             portfolioDots.appendChild(dot);
                         });
@@ -71,14 +74,13 @@
                         }
     
                         showSlide(currentIndex);
-                        setInterval(nextSlide, 3500);
+                        let slideInterval = setInterval(nextSlide, 3500);
                     })
                     .catch(error => console.error('Error loading portfolio:', error));
             });
         </script>
     </section>
     
-
     <section class="esteemed-partner">
         <h2 style="color: var(--primary-color);">Our Esteemed Partner</h2>
         <p>Collaborating with Industry leaders to foster Innovation</p>

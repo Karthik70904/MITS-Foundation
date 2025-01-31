@@ -236,3 +236,85 @@ body {
         height: 48px;
     }
 }
+
+.faqs {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 70%;
+	margin-inline: auto;
+	margin-top: 5rem;
+}
+
+.faqs h1 {
+	color: var(--primary-color);
+	font-size: 2rem;
+	margin-bottom: 0.5rem;
+	font-weight: 600;
+}
+
+.faqs-container {
+	width: 100%;
+	margin: 1rem 0;
+	padding: 1rem;
+	transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.faq {
+	padding: 0.8rem 2rem;
+	cursor: pointer;
+	background-color: #d6e4f0;
+	border-radius: 40px;
+	width: 100%;
+	margin-bottom: 1rem;
+}
+
+.faq h2 {
+	color: var(--primary-color);
+	font-size: 1.1rem;
+	font-weight: 600;
+	display: flex;
+	justify-content: space-between;
+}
+
+.faq.active p{
+    display: block;
+}
+
+.faq p {
+	color: gray;
+	display: none;
+    transition: all 0.3s;
+}
+
+@media screen and (max-width: 600px) {
+	.contact-header h2{
+		font-size: 1.8rem;
+	}
+
+	.contact-header p{
+		font-size: 1rem;
+	}
+
+	.contact-info a, .address-info h3{
+		font-size: 1rem !important;
+	}
+
+	.address-info p{
+		font-size: 0.7rem;
+	}
+
+	.faqs{
+		width: 100%;
+		padding: 10px;
+	}
+
+	.faq{
+		width: 100% !important;
+	}
+
+	.faq h2{
+		align-items: center;
+	}
+}

@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="assets/styles/nav.css">
     <link rel="stylesheet" href="assets/styles/footer.css">
     <link rel="stylesheet" href="assets/styles/events.css">
+    <link rel="stylesheet" href="assets/styles/images.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
@@ -45,21 +46,59 @@
                 </div>
             </section>
 
-            <section class="office-space">
-                <h2 style="color: var(--primary-color);">Office space</h2>
-                <p class="subtitle">with basic infrastructure and Computing facility</p>
-                <div class="image-grid">
-                    <div class="grid-image">
-                        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c" alt="Office Space 1">
-                    </div>
-                    <div class="grid-image">
-                        <img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2" alt="Office Space 2">
-                    </div>
-                    <div class="grid-image">
-                        <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72" alt="Office Space 3">
-                    </div>
-                </div>
-            </section>
+            <div class="container-i">
+                <h1>Facilities</h1>
+                <div id="galleries" class="galleries-i"></div>
+            </div>
+            <script>
+                fetch('assets/JSON/facilities.json')
+                    .then(response => response.json())
+                    .then(data => {
+                        const galleriesContainer = document.getElementById('galleries');
+            
+                        // Loop through each gallery
+                        Object.keys(data).forEach(galleryKey => {
+                            const gallery = data[galleryKey];
+            
+                            // Create a gallery section
+                            const gallerySection = document.createElement('div');
+                            gallerySection.className = 'gallery-section-i';
+            
+                            // Add a title for the gallery
+                            const galleryTitle = document.createElement('h2');
+                            galleryTitle.textContent = galleryKey.replace('gallery', 'Gallery ');
+                            gallerySection.appendChild(galleryTitle);
+            
+                            const galleryGrid = document.createElement('div');
+                            galleryGrid.className = 'gallery-grid-i';
+            
+                            // Loop through each section in the gallery
+                            Object.keys(gallery).forEach(sectionKey => {
+                                const image = gallery[sectionKey];
+            
+                                const card = document.createElement('div');
+                                card.className = 'gallery-item-i';
+                                card.innerHTML = `
+                                    <img src="${image.url}" alt="${image.title}">
+                                    <div class="overlay-i">
+                                        <h3>${image.title}</h3>
+                                        <p>${image.description}</p>
+                                    </div>
+                                `;
+                                galleryGrid.appendChild(card);
+                            });
+            
+                            // Append the gallery grid to the gallery section
+                            gallerySection.appendChild(galleryGrid);
+            
+                            // Append the gallery section to the main container
+                            galleriesContainer.appendChild(gallerySection);
+                        });
+                    })
+                    .catch(error => console.error('Error fetching data:', error));
+            </script>
+            
+            
 
             <section class="additional-facilities">
                 <h2 style="color: var(--primary-color);">Additional Facilities</h2>

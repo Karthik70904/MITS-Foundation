@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+	--primary-color: #1a4b8c;
+	--secondary-color: #fff;
+	--text-color: #333;
+	--spacing: 2rem;
+}
+
+
+body {
+	font-family: Arial, sans-serif;
+	line-height: 1.6;
+	color: var(--primary-color);
+	background-color: var(--secondary-color);
+}
+
+.container-i {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--primary-color);
+}
+
+/* Updated Gallery Styles */
+
+.gallery-i {
+    display: grid;
+    /* display: flex; */
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Reduced min width to 200px */
+    gap: 1.5rem;
+}
+
+.gallery-grid-i {
+    display: flex;
+}
+
+.gallery-item-i {
+    position: relative;
+    overflow: hidden;
+    flex: 1;
+    margin: 20px;
+    border-radius: 8px;
+    max-width: 400px;
+    max-height: 200px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.gallery-item-i:hover {
+    transform: translateY(-5px);
+}
+
+.gallery-item-i img {
+    width: 100%;
+    height: auto; /* Let the height adjust automatically */
+    object-fit: cover;
+    /* display: block; */
+}
+
+.overlay-i {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 71, 171, 0.8);
+    color: white;
+    padding: 1rem;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+}
+
+.gallery-item-i:hover .overlay-i {
+    transform: translateY(0);
+}
+
+.overlay-i h3 {
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.overlay-i p {
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+/* For tablets and smaller screens */
+@media (max-width: 768px) {
+    .gallery-i {
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      gap: 1rem;
+    }
+  
+    .gallery-item-i {
+      margin: 10px;
+      max-width: 100%;
+      max-height: none;
+    }
+  
+    .overlay-i {
+      padding: 0.75rem;
+    }
+  }
+  
+  /* For mobile phones */
+  @media (max-width: 480px) {
+    body {
+      padding: 1rem;
+    }
+  
+    h1 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+  
+    .overlay-i h3 {
+      font-size: 1rem;
+    }
+  
+    .overlay-i p {
+      font-size: 0.85rem;
+    }
+  }
+  

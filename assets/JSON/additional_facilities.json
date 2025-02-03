@@ -1,0 +1,34 @@
+{
+    "facilities": [
+        {
+            "icon": "innovation_hub.png",
+            "title": "Innovation Hub",
+            "description": "A space for creativity and collaboration with brainstorming tools and comfortable seating."
+        },
+        {
+            "icon": "connected_workspace.png",
+            "title": "Connected Workspace",
+            "description": "High-speed internet and modern computing resources for seamless productivity."
+        },
+        {
+            "icon": "tech_labs.png",
+            "title": "Tech Labs & AV Equipment",
+            "description": "Latest technology and high-quality AV equipment for hands-on projects and presentations."
+        },
+        {
+            "icon": "cafeteria.png",
+            "title": "Cafeteria",
+            "description": "A spacious dining area with diverse meal options."
+        },
+        {
+            "icon": "library.png",
+            "title": "Library",
+            "description": "A well-stocked library with books, journals, and digital resources."
+        },
+        {
+            "icon": "makerspace.png",
+            "title": "Makerspace",
+            "description": "A workshop with tools and materials for prototyping and creative projects."
+        }
+    ]
+}

@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="assets/styles/facilities.css">
     <link rel="stylesheet" href="assets/styles/nav.css">
     <link rel="stylesheet" href="assets/styles/footer.css">
-    <link rel="stylesheet" href="assets/styles/events.css">
     <link rel="stylesheet" href="assets/styles/images.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
@@ -48,7 +47,9 @@
 
             <div class="container-i">
                 <h1>Facilities</h1>
-                <div id="galleries" class="galleries-i"></div>
+                <div id="galleries" class="galleries-i">
+                    <!-- Galleries will be added here -->
+                </div>
             </div>
             <script>
                 fetch('assets/JSON/facilities.json')
@@ -87,7 +88,7 @@
                                 `;
                                 galleryGrid.appendChild(card);
                             });
-            
+                            
                             // Append the gallery grid to the gallery section
                             gallerySection.appendChild(galleryGrid);
             
@@ -98,55 +99,32 @@
                     .catch(error => console.error('Error fetching data:', error));
             </script>
             
-            
-
             <section class="additional-facilities">
                 <h2 style="color: var(--primary-color);">Additional Facilities</h2>
                 <p class="subtitle">Empowering Innovation with Our Facilities</p>
-                <div class="facilities-grid">
-                    <div class="facility-card">
-                        <div class="facility-icon">
-                            <img src="assets\images\facilities\icons\innovation_hub.png" alt="Innovation Hub">
-                        </div>
-                        <p class="facility-title">Innovation Hub</p>
-                        <div class="facility-desc">A space for creativity and collaboration with brainstorming tools and comfortable seating.</div>
-                    </div>
-                    <div class="facility-card">
-                        <div class="facility-icon">
-                            <img src="assets\images\facilities\icons\connected_workspace.png" alt="Connected Workspace">
-                        </div>
-                        <p class="facility-title">Connected Workspace</p>
-                        <div class="facility-desc">High-speed internet and modern computing resources for seamless productivity.</div>
-                    </div>
-                    <div class="facility-card">
-                        <div class="facility-icon">
-                            <img src="assets\images\facilities\icons\tech_labs.png" alt="Tech Labs & AV Equipment">
-                        </div>
-                        <p class="facility-title">Tech Labs & AV Equipment</p>
-                        <div class="facility-desc">Latest technology and high-quality AV equipment for hands-on projects and presentations.</div>
-                    </div>
-                    <div class="facility-card">
-                        <div class="facility-icon">
-                            <img src="assets\images\facilities\icons\cafeteria.png" alt="Cafeteria">
-                        </div>
-                        <p class="facility-title">Cafeteria</p>
-                        <div class="facility-desc">A spacious dining area with diverse meal options.</div>
-                    </div>
-                    <div class="facility-card">
-                        <div class="facility-icon">
-                            <img src="assets\images\facilities\icons\library.png" alt="Library">
-                        </div>
-                        <p class="facility-title">Library</p>
-                        <div class="facility-desc">A well-stocked library with books, journals, and digital resources.</div>
-                    </div>
-                    <div class="facility-card">
-                        <div class="facility-icon">
-                            <img src="assets\images\facilities\icons\makerspace.png" alt="Makerspace">
-                        </div>
-                        <p class="facility-title">Makerspace</p>
-                        <div class="facility-desc">A workshop with tools and materials for prototyping and creative projects.</div>
-                    </div>
+                <div class="facilities-grid" id="facilities-grid">
+                    <!-- Facility cards will be added here. -->
                 </div>
+                <script>
+                    // Fetch and display facility cards
+                        fetch('assets/JSON/additional_facilities.json')
+                            .then(response => response.json())
+                                .then(data => {
+                                        const facilitiesGrid = document.getElementById('facilities-grid');
+                                        data.facilities.forEach(facility => {
+                                            const card = document.createElement('div');
+                                            card.className = 'facility-card';
+                                            card.innerHTML = `
+                                                <div class="facility-icon">                                                    <img src="assets/images/facilities/icons/${facility.icon}" alt="${facility.title}">
+                                                </div>
+                                                <p class="facility-title">${facility.title}</p>
+                                                <div class="facility-desc">${facility.description}</div>
+                                                `;
+                                            facilitiesGrid.appendChild(card);
+                                        });
+                                    })
+                                .catch(error => console.error('Error fetching facilities:', error));
+                </script>
             </section>
 
             <section class="faqs">

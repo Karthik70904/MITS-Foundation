@@ -37,6 +37,8 @@ h1 {
 
 .gallery-grid-i {
     display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .gallery-item-i {

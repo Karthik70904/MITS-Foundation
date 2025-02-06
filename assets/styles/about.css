@@ -735,18 +735,22 @@ textarea:focus {
 }
 
 .mentor-image {
-  width: 100%;
-  height: auto; /* Reduced height */
-  overflow: hidden;
-  border-radius: 50%;
-}
-
-.mentor-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 16px; /* Added border-radius */
-}
+	width: 120px; /* Fixed width */
+	height: 120px; /* Fixed height */
+	margin: 0 auto; /* Centering */
+	border-radius: 50%;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+  }
+  
+  .mentor-image img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	border-radius: 50%;
+  }
 
 .mentor-card h3 {
   color: var(--primary-color);

@@ -9,11 +9,19 @@
     <link rel="stylesheet" href="assets/styles/contact.css" />
     <link rel="stylesheet" href="assets/styles/nav.css" />
     <link rel="stylesheet" href="assets/styles/footer.css" />
+    <link rel="stylesheet" href="assets/styles/preloader.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
 </head>
 
 <body>
+    <!-- Preloader -->
+    <div class="load-row">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
     <main>
         <section class="contact-header">
             <h2>Contact Us</h2>
@@ -50,7 +58,7 @@
                     width="100%" height="100%" style="border: 0" allowfullscreen="" loading="lazy"></iframe>
             </div>
         </section>
-<!-- 
+        <!-- 
         <section class="contact-form">
             <h2>Get in Touch</h2>
             <p>Ready to Transform Your Idea into Reality?</p>
@@ -172,9 +180,14 @@
             </div>
         </section>
     </main>
-
+    <script src="assets/JS/preloader.js" defer></script>
     <script src="assets/JS/components.js" defer></script>
     <script src="assets/JS/contact.js"></script>
+    <script>
+        window.onload = () => {
+            document.querySelector('.load-row').style.display = "none";
+        }
+    </script>
 </body>
 
 </html>

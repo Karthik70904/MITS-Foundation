@@ -9,11 +9,22 @@
   <link rel="stylesheet" href="assets/styles/footer.css">
   <link rel="stylesheet" href="assets/styles/about.css">
   <link rel="stylesheet" href="assets/styles/nav.css">
+
+  <link rel="stylesheet" href="assets/styles/preloader.css">
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 
 <body>
+<!-- Preloader -->
+  <div class="load-row">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  
   <main>
     <section class="hero">
       <div class="hero-content">
@@ -90,7 +101,7 @@
           <p class="directors-subtitle">Guiding the Next Generation of Innovators</p>
           <div class="mentors-container" id="mentors-container"></div>
         </section>
-        
+
         <script id="mentors-data" type="application/json">
           {
             "mentorsSection": {
@@ -99,36 +110,48 @@
               "mentors": [
                 {
                   "name": "Mr. Ajith Gopal Joshi",
-                  "email": "mentor@example.com",
+                  "email": "#",
                   "linkedin": "https://www.linkedin.com/",
-                  "image": "assets/images/Mentors/ajith_gopal_joshi.jpg"
+                  "image": "assets/images/About/Mentors/Ajith_Gopal_Joshi.jpg"
                 },
                 {
-                  "name": "Mr. Ajith Gopal Joshi",
-                  "email": "mentor@example.com",
+                  "name": "Dr. P. Sivaiah",
+                  "email": "#",
                   "linkedin": "https://www.linkedin.com/",
-                  "image": "assets/images/Directors/vijaya_bhaskar_sir.jpg"
+                  "image": "assets/images/About/Mentors/Sivaiah.jpg"
                 },
                 {
-                  "name": "Mr. Ajith Gopal Joshi",
-                  "email": "mentor@example.com",
+                  "name": "Dr. S. Gopal Krishna",
+                  "email": "#",
                   "linkedin": "https://www.linkedin.com/",
-                  "image": "assets/images/Mentors/ajith_gopal_joshi.jpg"
+                  "image": "assets/images/About/Mentors/Gopalakrishnan.jpg"
+                },
+                {
+                  "name": "Dr. K. Arul Kumar",
+                  "email": "#",
+                  "linkedin": "https://www.linkedin.com/",
+                  "image": "assets/images/About/Mentors/Dr._K._Arul_Kumar.jpg"
+                },
+                {
+                  "name": "Dr. Suman Yadav",
+                  "email": "#",
+                  "linkedin": "https://www.linkedin.com/",
+                  "image": "assets/images/About/Mentors/Suman_Yadav.jpg"
                 }
               ]
             }
           }
         </script>
-        
+
         <script>
           document.addEventListener('DOMContentLoaded', () => {
             const mentorsData = JSON.parse(document.getElementById('mentors-data').textContent);
             const mentorsContainer = document.getElementById('mentors-container');
-        
+
             mentorsData.mentorsSection.mentors.forEach(mentor => {
               const mentorCard = document.createElement('div');
               mentorCard.classList.add('mentor-card');
-        
+
               const mentorImage = document.createElement('div');
               mentorImage.classList.add('mentor-image');
               const imgElement = document.createElement('img');
@@ -136,32 +159,32 @@
               imgElement.alt = mentor.name;
               imgElement.classList.add('mentor-photo');
               mentorImage.appendChild(imgElement);
-        
+
               const mentorName = document.createElement('h3');
               mentorName.textContent = mentor.name;
               mentorCard.appendChild(mentorImage);
               mentorCard.appendChild(mentorName);
-        
+
               const socialIcons = document.createElement('div');
               socialIcons.classList.add('social-icons');
-        
+
               const emailIcon = document.createElement('a');
               emailIcon.href = `mailto:${mentor.email}`;
               emailIcon.innerHTML = '<i class="bi bi-envelope-fill"></i>';
               emailIcon.classList.add('email-icon');
               emailIcon.title = 'Send Email';
-        
+
               const linkedinIcon = document.createElement('a');
               linkedinIcon.href = mentor.linkedin;
               linkedinIcon.target = '_blank';
               linkedinIcon.innerHTML = '<i class="bi bi-linkedin"></i>';
               linkedinIcon.classList.add('linkedin-icon');
               linkedinIcon.title = 'LinkedIn Profile';
-        
+
               socialIcons.appendChild(emailIcon);
               socialIcons.appendChild(linkedinIcon);
               mentorCard.appendChild(socialIcons);
-        
+
               mentorsContainer.appendChild(mentorCard);
             });
           });
@@ -394,10 +417,11 @@
               </div>
 
   </main>
-
+  <script src="assets/JS/preloader.js" defer></script>
   <script src="assets/JS/components.js" defer></script>
   <script>
     window.onload = () => {
+      document.querySelector('.load-row').style.display = "none";
       const navAbout = document.querySelector('#nav-about');
       if (navAbout) {
         navAbout.style.color = '#1a4b8c';

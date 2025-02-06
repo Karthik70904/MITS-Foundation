@@ -10,15 +10,31 @@
     <link rel="stylesheet" href="assets/styles/nav.css">
     <link rel="stylesheet" href="assets/styles/footer.css">
     <link rel="stylesheet" href="assets/styles/downloads.css">
+    <link rel="stylesheet" href="assets/styles/preloader.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"></head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
 
 <body>
+    <!-- Preloader -->
+    <div class="load-row">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
     <main class="main-content">
         <h1>Facilities</h1>
         <div class="download-list"></div>
     </main>
+    <script src="assets/JS/preloader.js" defer></script>
     <script src="assets\JS\components.js" defer></script>
     <script src="assets\JS\downloads.js" defer></script>
+    <script>
+        window.onload = () => {
+            document.querySelector('.load-row').style.display = "none";
+        }
+    </script>
 </body>
+
 </html>

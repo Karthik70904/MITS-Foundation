@@ -1,40 +1,58 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+}
+
 .load-row {
-    width: 100px;
-    height: 50px;
-    line-height: 50px;
-    text-align: center;
-  }
-  
-  .load-row span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #fff; 
+    z-index: 999999;
+}
+
+.load-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.load-row span {
     display: inline-block;
     width: 10px;
     height: 10px;
     background: #1a4b8c;
     border-radius: 50px;
     animation: up-down6 0.5s ease-in infinite alternate;
-  }
-  
-  .load-row span:nth-child(2) {
+}
+
+.load-row span:nth-child(2) {
     background: #255da5;
     animation-delay: 0.16s;
-  }
-  
-  .load-row span:nth-child(3) {
+}
+
+.load-row span:nth-child(3) {
     background: #1a4b8c;
     animation-delay: 0.32s;
-  }
-  
-  .load-row span:nth-child(4) {
+}
+
+.load-row span:nth-child(4) {
     background: #2169c7;
     animation-delay: 0.48s;
-  }
-  
-  @keyframes up-down6 {
+}
+
+@keyframes up-down6 {
     0% {
-      transform: translateY(-10px);
+        transform: translateY(-10px);
     }
-  
+
     100% {
-      transform: translateY(10px);
+        transform: translateY(10px);
     }
-  }
+}

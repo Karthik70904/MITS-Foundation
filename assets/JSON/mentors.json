@@ -1,0 +1,38 @@
+{
+  "mentorsSection": {
+    "title": "Meet Our Mentors",
+    "subtitle": "Guiding the Next Generation of Innovators",
+    "mentors": [
+      {
+        "name": "Mr. Ajith Gopal Joshi",
+        "email": "#",
+        "linkedin": "https://www.linkedin.com/",
+        "image": "assets/images/About/Mentors/Ajith_Gopal_Joshi.jpg"
+      },
+      {
+        "name": "Dr. P. Sivaiah",
+        "email": "#",
+        "linkedin": "https://www.linkedin.com/",
+        "image": "assets/images/About/Mentors/Sivaiah.jpg"
+      },
+      {
+        "name": "Dr. S. Gopal Krishna",
+        "email": "#",
+        "linkedin": "https://www.linkedin.com/",
+        "image": "assets/images/About/Mentors/Gopalakrishnan.jpg"
+      },
+      {
+        "name": "Dr. K. Arul Kumar",
+        "email": "#",
+        "linkedin": "https://www.linkedin.com/",
+        "image": "assets/images/About/Mentors/Dr._K._Arul_Kumar.jpg"
+      },
+      {
+        "name": "Dr. Suman Yadav",
+        "email": "#",
+        "linkedin": "https://www.linkedin.com/",
+        "image": "assets/images/About/Mentors/Suman_Yadav.jpg"
+      }
+    ]
+  }
+}

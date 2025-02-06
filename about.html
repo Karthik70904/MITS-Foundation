@@ -85,52 +85,88 @@
           </div>
         </div>
 
-          <!-- <section class="mentors-section">
-            <h2>Meet Our Mentors</h2>
-            <p class="directors-subtitle">Guiding the Next Generation of Innovators</p>
-            <div class="mentors-container">
-              <div class="mentor-card">
-                <div class="mentor-image">
-                  <div class="hover-icons">
-                    <a href="mailto:mentor@example.com" class="email-icon" title="Send Email"></a>
-                    <a href="https://www.linkedin.com/" target="_blank" class="linkedin-icon" title="LinkedIn Profile"></a>
-                  </div>
-                </div>
-                <p>Mr. Ajith Gopal Joshi</p>
-              </div>
+        <section class="mentors-section">
+          <h2>Meet Our Mentors</h2>
+          <p class="directors-subtitle">Guiding the Next Generation of Innovators</p>
+          <div class="mentors-container" id="mentors-container"></div>
+        </section>
         
-              <div class="mentor-card">
-                <div class="mentor-image">
-                  <div class="hover-icons">
-                    <a href="mailto:mentor@example.com" class="email-icon" title="Send Email"></a>
-                    <a href="https://www.linkedin.com/" target="_blank" class="linkedin-icon" title="LinkedIn Profile"></a>
-                  </div>
-                </div>
-                <p>Mr. Ajith Gopal Joshi</p>
-              </div>
+        <script id="mentors-data" type="application/json">
+          {
+            "mentorsSection": {
+              "title": "Meet Our Mentors",
+              "subtitle": "Guiding the Next Generation of Innovators",
+              "mentors": [
+                {
+                  "name": "Mr. Ajith Gopal Joshi",
+                  "email": "mentor@example.com",
+                  "linkedin": "https://www.linkedin.com/",
+                  "image": "assets/images/Mentors/ajith_gopal_joshi.jpg"
+                },
+                {
+                  "name": "Mr. Ajith Gopal Joshi",
+                  "email": "mentor@example.com",
+                  "linkedin": "https://www.linkedin.com/",
+                  "image": "assets/images/Directors/vijaya_bhaskar_sir.jpg"
+                },
+                {
+                  "name": "Mr. Ajith Gopal Joshi",
+                  "email": "mentor@example.com",
+                  "linkedin": "https://www.linkedin.com/",
+                  "image": "assets/images/Mentors/ajith_gopal_joshi.jpg"
+                }
+              ]
+            }
+          }
+        </script>
         
-              <div class="mentor-card">
-                <div class="mentor-image">
-                  <div class="hover-icons">
-                    <a href="mailto:mentor@example.com" class="email-icon" title="Send Email"></a>
-                    <a href="https://www.linkedin.com/" target="_blank" class="linkedin-icon" title="LinkedIn Profile"></a>
-                  </div>
-                </div>
-                <p>Mr. Ajith Gopal Joshi</p>
-              </div>
+        <script>
+          document.addEventListener('DOMContentLoaded', () => {
+            const mentorsData = JSON.parse(document.getElementById('mentors-data').textContent);
+            const mentorsContainer = document.getElementById('mentors-container');
         
-              <div class="mentor-card">
-                <div class="mentor-image">
-                  <div class="hover-icons">
-                    <a href="mailto:mentor@example.com" class="email-icon" title="Send Email"></a>
-                    <a href="https://www.linkedin.com/" target="_blank" class="linkedin-icon" title="LinkedIn Profile"></a>
-                  </div>
-                </div>
-                <p>Mr. Ajith Gopal Joshi</p>
-              </div>
-            </div>
-          </section> -->
- 
+            mentorsData.mentorsSection.mentors.forEach(mentor => {
+              const mentorCard = document.createElement('div');
+              mentorCard.classList.add('mentor-card');
+        
+              const mentorImage = document.createElement('div');
+              mentorImage.classList.add('mentor-image');
+              const imgElement = document.createElement('img');
+              imgElement.src = mentor.image;
+              imgElement.alt = mentor.name;
+              imgElement.classList.add('mentor-photo');
+              mentorImage.appendChild(imgElement);
+        
+              const mentorName = document.createElement('h3');
+              mentorName.textContent = mentor.name;
+              mentorCard.appendChild(mentorImage);
+              mentorCard.appendChild(mentorName);
+        
+              const socialIcons = document.createElement('div');
+              socialIcons.classList.add('social-icons');
+        
+              const emailIcon = document.createElement('a');
+              emailIcon.href = `mailto:${mentor.email}`;
+              emailIcon.innerHTML = '<i class="bi bi-envelope-fill"></i>';
+              emailIcon.classList.add('email-icon');
+              emailIcon.title = 'Send Email';
+        
+              const linkedinIcon = document.createElement('a');
+              linkedinIcon.href = mentor.linkedin;
+              linkedinIcon.target = '_blank';
+              linkedinIcon.innerHTML = '<i class="bi bi-linkedin"></i>';
+              linkedinIcon.classList.add('linkedin-icon');
+              linkedinIcon.title = 'LinkedIn Profile';
+        
+              socialIcons.appendChild(emailIcon);
+              socialIcons.appendChild(linkedinIcon);
+              mentorCard.appendChild(socialIcons);
+        
+              mentorsContainer.appendChild(mentorCard);
+            });
+          });
+        </script>
+
         <div class="container-o">
           <!-- Background Patterns -->
           <div class="pattern-o pattern-top-o"></div>
@@ -322,7 +358,7 @@
                       and expert guidance can help drive meaningful impact and empower the next generation of
                       innovators.</p>
                   </div>
-<!-- 
+                  <!-- 
                   <div class="form-section-v">
                     <form action="https://mits-foundation-fast-api.onrender.com/volunteer/" method="post">
                       <div class="form-group-v">

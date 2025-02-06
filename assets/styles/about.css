@@ -693,75 +693,101 @@ textarea:focus {
 	}
 }
 
-/* .mentors-section {
-	max-width: 1200px;
-	margin: 50px auto;
-  }
-  
-  .mentors-section p {
-	color: #000000;
-  }
-  
+.mentors-section {
+  text-align: center;
+  margin: 4rem 0;
+  padding: 2rem;
+  background-color: #fff5f3;
+}
+
+.mentors-section h2 {
+  color: var(--primary-color);
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.mentors-section p {
+  color: #666;
+  margin-bottom: 3rem;
+  font-size: 0.9rem;
+}
+
+.mentors-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.mentor-card {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  width: 280px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.mentor-card:hover {
+  transform: translateY(-5px);
+}
+
+.mentor-image {
+  width: 100%;
+  height: auto; /* Reduced height */
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.mentor-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 16px; /* Added border-radius */
+}
+
+.mentor-card h3 {
+  color: var(--primary-color);
+  margin: 1rem 0 0.25rem;
+  font-size: 1.2rem;
+}
+
+.mentor-card p {
+  color: #666;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.email-icon, .linkedin-icon {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  transition: color 0.3s ease;
+}
+
+.email-icon:hover, .linkedin-icon:hover {
+  color: var(--secondary-color);
+}
+
+@media (max-width: 768px) {
   .mentors-container {
-	display: flex;
-	justify-content: space-evenly;
-	flex-wrap: wrap;
-	gap: 1.5rem;
+    flex-direction: column;
+    align-items: center;
   }
-  
+
   .mentor-card {
-	background-color: #f7f7f7;
-	border: 1px solid #ccc;
-	border-radius: 10px;
-	width: 250px;
-	padding: 1rem;
-	text-align: center;
-	position: relative;
+    width: 100%;
+    max-width: 280px;
   }
-  
-  .mentor-image {
-	width: 100px;
-	height: 100px;
-	margin: 0 auto 1rem;
-	background: #ddd;
-	border-radius: 50%;
-	position: relative;
-	cursor: pointer;
-	overflow: hidden;
-  }
-  
-  .hover-icons {
-	position: absolute;
-	top: 50%;
-	left: 110%;
-	display: flex;
-	gap: 10px;
-	transform: translateY(-50%);
-	opacity: 0;
-	transition: all 0.3s ease;
-  }
-  
-  .mentor-image:hover .hover-icons {
-	left: 110%;
-	opacity: 1;
-  }
-  
-  .email-icon,
-  .linkedin-icon {
-	width: 24px;
-	height: 24px;
-	display: inline-block;
-	background-size: cover;
-	cursor: pointer;
-  }
-  
-  .email-icon {
-	background-image: url('https://img.icons8.com/material-rounded/24/email.png');
-  }
-  
-  .linkedin-icon {
-	background-image: url('https://img.icons8.com/material-rounded/24/linkedin.png');
-  } */
+}
 
 @media screen and (max-width: 600px) {
 	.karthik h1 {

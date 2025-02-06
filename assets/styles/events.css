@@ -130,7 +130,7 @@
   
   .newsletter-section-u {
     flex: 1;
-    background: url('https://images.unsplash.com/photo-1541829070764-84a7d30dd3f3?ixlib=rb-4.0.3') center/cover;
+    background: url('../images/Home/news_letter_bg.jpeg') center/cover;
     padding: 40px;
     border-radius: 8px;
     display: flex;

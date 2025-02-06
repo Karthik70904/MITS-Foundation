@@ -333,32 +333,6 @@ header p {
 	font-size: 1.125rem;
 }
 
-/* Background patterns */
-.pattern-o {
-	position: absolute;
-	opacity: 0.1;
-	display: grid;
-	grid-template-columns: repeat(5, 1fr);
-	gap: 0.5rem;
-}
-
-.pattern-o::before {
-	content: "";
-	width: 1rem;
-	height: 1rem;
-	border: 2px solid #1e3a8a;
-	transform: rotate(45deg);
-}
-
-.pattern-top-o {
-	top: 0;
-	right: 0;
-}
-
-.pattern-bottom-o {
-	bottom: 0;
-	left: 0;
-}
 
 /* Objectives layout */
 .objectives-o {
@@ -519,28 +493,6 @@ header p {
 	}
 }
 
-/* Pattern grid */
-.pattern-o::before {
-	content: "";
-}
-
-.pattern-o {
-	display: grid;
-	grid-template-columns: repeat(5, 1fr);
-	gap: 0.5rem;
-}
-
-.pattern-o::before,
-.pattern-o::after,
-.pattern-o *,
-.pattern-o *::before,
-.pattern-o *::after {
-	content: "";
-	width: 1rem;
-	height: 1rem;
-	border: 2px solid #1e3a8a;
-	transform: rotate(45deg);
-}
 
 .container-v {
 	/* width: 100%; */

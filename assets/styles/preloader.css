@@ -11,18 +11,12 @@
     z-index: 999999;
 }
 
-.load-row {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 .load-row span {
     display: inline-block;
-    width: 10px;
-    height: 10px;
+    width: 2vw;
+    height: 2vw;
     background: #1a4b8c;
-    border-radius: 50px;
+    border-radius: 50%;
     animation: up-down6 0.5s ease-in infinite alternate;
 }
 
@@ -43,10 +37,10 @@
 
 @keyframes up-down6 {
     0% {
-        transform: translateY(-10px);
+        transform: translateY(-2vh);
     }
 
     100% {
-        transform: translateY(10px);
+        transform: translateY(2vh);
     }
 }

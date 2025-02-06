@@ -1,0 +1,25 @@
+{
+  "successStories": [
+    {
+      "companyLogo": "assets/images/Portfolio/company/hexaind.png",
+      "testimonial": "We are deeply grateful to the MITS Foundation for their steadfast support and invaluable guidance in incubating our company. Their mentorship, resources, and strategic insights have played a crucial role in shaping our path toward innovation and success.",
+      "authorImage": "assets/images/Portfolio/Persons/Vishnupriya.jpg",
+      "authorName": "Mrs. Vishnupriya D.",
+      "authorTitle": "Director of Hexaind"
+    },
+    {
+      "companyLogo": "assets/images/Portfolio/company/gyaantrix.jpg",
+      "testimonial": "The MITS incubation center is supportive, offering guidance and resources to startups. While they provide assistance, the level of support may vary depending on the project's needs.",
+      "authorImage": "assets/images/Portfolio/Persons/Rohith.jpg",
+      "authorName": "Gyaantrix",
+      "authorTitle": "Founder & CEO of Gyaantrix"
+    },
+    {
+      "companyLogo": "assets/images/Portfolio/company/creomind.png",
+      "testimonial": "CreoMind Innovations, my startup, has been incubated at the MITS Foundation, providing a strong platform for innovation in Education Technology. The foundation’s support has been instrumental in fostering our growth and impact in the field of Data Science and Analytics education.",
+      "authorImage": "assets/images/Portfolio/Persons/Jagan.jpg",
+      "authorName": "Creominds",
+      "authorTitle": "Director CreoMind Innovations"
+    }
+  ]
+}

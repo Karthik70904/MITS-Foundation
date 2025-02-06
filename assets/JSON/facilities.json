@@ -4,19 +4,19 @@
             "id": 1,
             "url": "assets/images/facilities/images/01.jpg",
             "title": "Startup Cell",
-            "description": "Startup Cell Office Space"
+            "description": ""
         },
         "section2": {
             "id": 2,
             "url": "assets/images/facilities/images/02.jpg",
             "title": "Innovation Cell",
-            "description": "Innovation Cell Office Space"
+            "description": ""
         },
         "section3": {
             "id": 3,
             "url": "assets/images/facilities/images/03.jpg",
             "title": "MSME",
-            "description": "MSME"
+            "description": ""
         }
     },
     "Common Meeting Room": {
@@ -24,39 +24,39 @@
             "id": 4,
             "url": "assets/images/facilities/images/11.jpg",
             "title": "Board Room",
-            "description": "Directors and Advisers Meeting "
+            "description": ""
         },
         "section2": {
             "id": 5,
             "url": "assets/images/facilities/images/12.jpg",
             "title": "Scaleup Room",
-            "description": "Students Meeting Room"
+            "description": ""
         },
         "section3": {
             "id": 6,
             "url": "assets/images/facilities/images/13.jpg",
-            "title": "Robotics Workshop",
-            "description": "Hands-on robotics experience"
+            "title": "Seminar Hall",
+            "description": ""
         }
     },
     "Laboratory Facilities": {
         "section1": {
             "id": 7,
             "url": "assets/images/facilities/images/21.jpg",
-            "title": "Debate Competition",
-            "description": "Students engaging in debates"
+            "title": "Computer Lab",
+            "description": ""
         },
         "section2": {
             "id": 8,
             "url": "assets/images/facilities/images/22.jpg",
-            "title": "Art Exhibition",
-            "description": "Display of student artworks"
+            "title": "Engineering labs",
+            "description": ""
         },
         "section3": {
             "id": 9,
             "url": "assets/images/facilities/images/23.jpg",
-            "title": "Convocation",
-            "description": "Graduates celebrating their success"
+            "title": "Chemistey Laboratory",
+            "description": ""
         }
     }
 }

@@ -49,13 +49,13 @@
         "section2": {
             "id": 8,
             "url": "assets/images/facilities/images/22.jpg",
-            "title": "Engineering labs",
+            "title": "Engineering Lab",
             "description": ""
         },
         "section3": {
             "id": 9,
             "url": "assets/images/facilities/images/23.jpg",
-            "title": "Chemistey Laboratory",
+            "title": "Chemistry Lab",
             "description": ""
         }
     }

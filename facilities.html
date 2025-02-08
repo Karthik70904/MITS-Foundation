@@ -63,54 +63,54 @@
                 <div id="galleries" class="galleries-i">
                     <!-- Galleries will be added here -->
                 </div>
-            </div>
-            <script>
-                fetch('assets/JSON/facilities.json')
-                    .then(response => response.json())
-                    .then(data => {
-                        const galleriesContainer = document.getElementById('galleries');
+                <script>
+                    fetch('assets/JSON/facilities.json')
+                        .then(response => response.json())
+                        .then(data => {
+                            const galleriesContainer = document.getElementById('galleries');
 
-                        // Loop through each gallery
-                        Object.keys(data).forEach(galleryKey => {
-                            const gallery = data[galleryKey];
+                            // Loop through each gallery
+                            Object.keys(data).forEach(galleryKey => {
+                                const gallery = data[galleryKey];
 
-                            // Create a gallery section
-                            const gallerySection = document.createElement('div');
-                            gallerySection.className = 'gallery-section-i';
+                                // Create a gallery section
+                                const gallerySection = document.createElement('div');
+                                gallerySection.className = 'gallery-section-i';
 
-                            // Add a title for the gallery
-                            const galleryTitle = document.createElement('h2');
-                            galleryTitle.textContent = galleryKey.replace('gallery', 'Gallery ');
-                            gallerySection.appendChild(galleryTitle);
+                                // Add a title for the gallery
+                                const galleryTitle = document.createElement('h2');
+                                galleryTitle.textContent = galleryKey.replace('gallery', 'Gallery ');
+                                gallerySection.appendChild(galleryTitle);
 
-                            const galleryGrid = document.createElement('div');
-                            galleryGrid.className = 'gallery-grid-i';
+                                const galleryGrid = document.createElement('div');
+                                galleryGrid.className = 'gallery-grid-i';
 
-                            // Loop through each section in the gallery
-                            Object.keys(gallery).forEach(sectionKey => {
-                                const image = gallery[sectionKey];
+                                // Loop through each section in the gallery
+                                Object.keys(gallery).forEach(sectionKey => {
+                                    const image = gallery[sectionKey];
 
-                                const card = document.createElement('div');
-                                card.className = 'gallery-item-i';
-                                card.innerHTML = `
-                                    <img src="${image.url}" alt="${image.title}">
-                                    <div class="overlay-i">
-                                        <h3>${image.title}</h3>
-                                        <p>${image.description}</p>
-                                    </div>
-                                `;
-                                galleryGrid.appendChild(card);
+                                    const card = document.createElement('div');
+                                    card.className = 'gallery-item-i';
+                                    card.innerHTML = `
+                                        <img src="${image.url}" alt="${image.title}">
+                                        <div class="overlay-i">
+                                            <h3>${image.title}</h3>
+                                            <p>${image.description}</p>
+                                        </div>
+                                    `;
+                                    galleryGrid.appendChild(card);
+                                });
+
+                                // Append the gallery grid to the gallery section
+                                gallerySection.appendChild(galleryGrid);
+
+                                // Append the gallery section to the main container
+                                galleriesContainer.appendChild(gallerySection);
                             });
-
-                            // Append the gallery grid to the gallery section
-                            gallerySection.appendChild(galleryGrid);
-
-                            // Append the gallery section to the main container
-                            galleriesContainer.appendChild(gallerySection);
-                        });
-                    })
-                    .catch(error => console.error('Error fetching data:', error));
-            </script>
+                        })
+                        .catch(error => console.error('Error fetching data:', error));
+                </script>
+            </div>
 
             <section class="additional-facilities">
                 <h2 style="color: var(--primary-color);">Additional Facilities</h2>

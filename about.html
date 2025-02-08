@@ -17,7 +17,7 @@
 </head>
 
 <body>
-<!-- Preloader -->
+  <!-- Preloader -->
   <div class="load-row">
     <span></span>
     <span></span>
@@ -109,7 +109,7 @@
               <p>Professor & Principal, MITS</p>
             </div>
             <div class="director-card">
-              <div class="director-image" >
+              <div class="director-image">
                 <img src="assets/images/Directors/Thulasiram_sir.jpg" alt="Director">
               </div>
               <h3>Dr. R. Thulasiram Naidu</h3>
@@ -121,7 +121,7 @@
 
         <section class="mentors-section">
           <h2>Our Mentors</h2>
-            <p class="directors-subtitle">Meet the dedicated mentors guiding the next generation of innovators</p>
+          <p class="directors-subtitle">Meet the dedicated mentors guiding the next generation of innovators</p>
           <div class="mentors-container" id="mentors-container">
             <!-- Mentor cards will be added here. -->
           </div>
@@ -131,11 +131,11 @@
                 .then(response => response.json())
                 .then(mentorsData => {
                   const mentorsContainer = document.getElementById('mentors-container');
-          
+
                   mentorsData.mentorsSection.mentors.forEach(mentor => {
                     const mentorCard = document.createElement('div');
                     mentorCard.classList.add('mentor-card');
-          
+
                     const mentorImage = document.createElement('div');
                     mentorImage.classList.add('mentor-image');
                     const imgElement = document.createElement('img');
@@ -143,32 +143,32 @@
                     imgElement.alt = mentor.name;
                     imgElement.classList.add('mentor-photo');
                     mentorImage.appendChild(imgElement);
-          
+
                     const mentorName = document.createElement('h3');
                     mentorName.textContent = mentor.name;
                     mentorCard.appendChild(mentorImage);
                     mentorCard.appendChild(mentorName);
-          
+
                     const socialIcons = document.createElement('div');
                     socialIcons.classList.add('social-icons');
-          
+
                     const emailIcon = document.createElement('a');
                     emailIcon.href = `mailto:${mentor.email}`;
                     emailIcon.innerHTML = '<i class="bi bi-envelope-fill"></i>';
                     emailIcon.classList.add('email-icon');
                     emailIcon.title = 'Send Email';
-          
+
                     const linkedinIcon = document.createElement('a');
                     linkedinIcon.href = mentor.linkedin;
                     linkedinIcon.target = '_blank';
                     linkedinIcon.innerHTML = '<i class="bi bi-linkedin"></i>';
                     linkedinIcon.classList.add('linkedin-icon');
                     linkedinIcon.title = 'LinkedIn Profile';
-          
+
                     socialIcons.appendChild(emailIcon);
                     socialIcons.appendChild(linkedinIcon);
                     mentorCard.appendChild(socialIcons);
-          
+
                     mentorsContainer.appendChild(mentorCard);
                   });
                 })
@@ -176,7 +176,7 @@
             });
           </script>
         </section>
-        
+
 
         <div class="container-o">
 
@@ -184,9 +184,9 @@
           <div class="content-o">
             <header>
               <div class="objective" style="display: flex;flex-direction:column;">
-              <h1 style="font-size: 2rem;">Our Objectives</h1>
-              <p style="font-size: 0.9rem;">The main objectives that drive our foundation forward</p>
-            </div>
+                <h1 style="font-size: 2rem;">Our Objectives</h1>
+                <p style="font-size: 0.9rem;">The main objectives that drive our foundation forward</p>
+              </div>
             </header>
 
             <div class="objectives-o">
@@ -295,11 +295,10 @@
                         <div class="icon-o">
                           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path
-                              d="M6 22V4c0-.27 0-.55.07-.82a1.98 1.98 0 0 1 1.1-1.11C7.46 2 7.73 2 8 2h8c.27 0 .55 0 .82.07a1.98 1.98 0 0 1 1.11 1.1c.07.28.07.56.07.83v18H6Z" />
-                            <path d="M2 14h12" />
-                            <path d="M10 22V2" />
-                            <path d="M2 2h12" />
+                            <path d="M3 21V8a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v13" />
+                            <path d="M9 21V12h6v9" />
+                            <path d="M9 3h6v5H9z" />
+                            <path d="M3 21h18" />
                           </svg>
                         </div>
                       </div>

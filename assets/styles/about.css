@@ -372,7 +372,7 @@ header p {
 	height: 100%;
 	aspect-ratio: 1;
 	z-index: 1;
-	scale: 0.95;
+	scale: 0.9;
 	filter: url("#flt_tag");
 }
 .icon-container-o-border {
@@ -437,9 +437,10 @@ header p {
 	translate: 0 -50% 0;
 }
 
-.icon-o svg {
-	color: #1e3a8a;
-	scale: 2;
+.icon-o img {
+	width: 50%;
+	height: 50%;
+	object-fit: cover;
 }
 
 /* Text content */
@@ -485,11 +486,6 @@ header p {
 	.icon-o {
 		width: 3rem;
 		height: 3rem;
-	}
-
-	.icon-o svg {
-		width: 20px;
-		height: 20px;
 	}
 }
 

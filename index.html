@@ -66,46 +66,29 @@
     <img src="assets/images/Structure/Structure.png" alt="" class="thrust-bg-addon addon-2">
     <h2>Thrust Areas</h2>
     <p class="subtitle">Our key thrust areas include:</p>
-    <div class="areas-grid">
-      <div class="area-card">
-        <i class="fas fa-graduation-cap"></i>
-        <h3>Education Empowerment</h3>
-        <p>Empowering students and educators through innovative education models, mentorship, and workshops to promote
-          knowledge sharing and technological growth.</p>
-      </div>
-      <div class="area-card">
-        <i class="fa-solid fa-microchip"></i>
-        <h3>Cyber & AI Innovation</h3>
-        <p>Advancing Cyber Security, Artificial Intelligence, and Information & Communication Technology (ICT) to create
-          secure
-          digital systems and smarter communication networks.</p>
-      </div>
-      <div class="area-card">
-        <i class="fa-solid fa-robot"></i>
-        <h3>Drone & Automation</h3>
-        <p>Exploring Drone Technology, Manufacturing, and Automation to solve social and national challenges with
-          advanced
-          robotics and autonomous solutions.</p>
-      </div>
-      <div class="area-card">
-        <i class="fas fa-building"></i>
-        <h3>Smart Construction</h3>
-        <p>Innovating with Building Materials and Construction Technology for smarter infrastructure,
-          sustainable designs, and efficient project management.</p>
-      </div>
-      <div class="area-card">
-        <i class="fas fa-solar-panel"></i>
-        <h3>Renewable Energy</h3>
-        <p>Promoting Renewable Energy solutions like solar and wind technologies to support environmental
-          sustainability and cleaner energy alternatives.</p>
-      </div>
-      <div class="area-card">
-        <i class="fas fa-car-battery"></i>
-        <h3>Electric Mobility Evolution</h3>
-        <p>Encouraging Electric Mobility innovations with electric vehicles and charging infrastructure for
-          eco-friendly transportation solutions.</p>
-      </div>
+    <div class="areas-grid" id="areas-grid">
+      <!-- Area cards will be dynamically inserted here -->
     </div>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        fetch('assets/JSON/thrust_areas.json')
+          .then(response => response.json())
+          .then(data => {
+            const areasGrid = document.getElementById('areas-grid');
+            data.areas.forEach(area => {
+              const areaCard = document.createElement('div');
+              areaCard.classList.add('area-card');
+              areaCard.innerHTML = `
+                <i class="${area.icon}"></i>
+                <h3>${area.title}</h3>
+                <p>${area.description}</p>
+              `;
+              areasGrid.appendChild(areaCard);
+            });
+          })
+          .catch(error => console.error('Error loading areas:', error));
+      });
+    </script>
   </section>
 
   <div class="container-u">

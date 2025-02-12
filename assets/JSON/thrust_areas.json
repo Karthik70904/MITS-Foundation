@@ -1,0 +1,49 @@
+{
+  "areas": [
+    {
+      "icon": "fas fa-graduation-cap",
+      "title": "Education Empowerment",
+      "description": "Empowering students and educators through innovative education models, mentorship, and workshops to promote knowledge sharing and technological growth."
+    },
+    {
+      "icon": "fa-solid fa-microchip",
+      "title": "Cyber & AI Innovation",
+      "description": "Advancing Cyber Security, Artificial Intelligence, and Information & Communication Technology (ICT) to create secure digital systems and smarter communication networks."
+    },
+    {
+      "icon": "fa-solid fa-robot",
+      "title": "Drone & Automation",
+      "description": "Exploring Drone Technology, Manufacturing, and Automation to solve social and national challenges with advanced robotics and autonomous solutions."
+    },
+    {
+      "icon": "fas fa-building",
+      "title": "Smart Construction",
+      "description": "Innovating with Building Materials and Construction Technology for smarter infrastructure, sustainable designs, and efficient project management."
+    },
+    {
+      "icon": "fas fa-solar-panel",
+      "title": "Renewable Energy",
+      "description": "Promoting Renewable Energy solutions like solar and wind technologies to support environmental sustainability and cleaner energy alternatives."
+    },
+    {
+      "icon": "fas fa-car-battery",
+      "title": "Electric Mobility Evolution",
+      "description": "Encouraging Electric Mobility innovations with electric vehicles and charging infrastructure for eco-friendly transportation solutions."
+    },
+    {
+        "icon": "fas fa-seedling",
+        "title": "Agriculture, Agribusiness & Allied Fields",
+        "description": "Promoting Agriculture, Agribusiness, and Allied Fields to enhance food security, sustainable farming practices, and rural economic development."
+    },
+    {
+        "icon": "fas fa-hands-helping",
+        "title": "Traditional Skills & Trades",
+        "description": "Preserving and promoting traditional skills and trades through training, support, and innovation to ensure their sustainability and relevance in the modern economy."
+    },
+    {
+        "icon":"fa-solid fa-hand-sparkles",
+        "title":"Sustainable Artisians & Craftmenship Products",
+        "description": "Supporting sustainable artisans and craftsmanship products to preserve cultural heritage and promote eco-friendly practices in the modern market."
+    }
+  ]
+}

@@ -691,6 +691,7 @@ textarea:focus {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	margin-top: 10px;
   }
   
   .mentor-image img {
@@ -716,7 +717,7 @@ textarea:focus {
   display: flex;
   justify-content: center;
   gap: 15px;
-  margin-top: 10px;
+  margin: 10px;
 }
 
 .email-icon, .linkedin-icon {

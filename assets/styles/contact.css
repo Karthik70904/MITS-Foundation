@@ -290,7 +290,11 @@ textarea {
 .faq p {
 	color: gray;
 	display: none;
-    transition: all 0.3s;
+    transition: all 0.3s ease;
+}
+
+.faq i{
+	transition: transform 0.3s ease;
 }
 
 @media screen and (max-width: 600px) {

@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact Us | MITS Foundation</title>
-    <link rel="shortcut icon" href="assets/images/logos/MITS_Foundation_logo.png" type="image/x-icon" />
+    <link rel="shortcut icon" href="assets/images/logos/MITS_Foundation_logo_Compressed.png" type="image/x-icon">
     <link rel="stylesheet" href="assets/styles/contact.css" />
     <link rel="stylesheet" href="assets/styles/nav.css" />
     <link rel="stylesheet" href="assets/styles/footer.css" />
@@ -88,96 +88,41 @@
          -->
         <section class="faqs">
             <h2>Frequently Asked Questions (FAQs)</h2>
-            <div class="faqs-container">
-                <div class="faq">
-                    <h2>
-                        <span>How can I join the incubation program?</span><span><i
-                                class="fa fa-chevron-down"></i></span>
-                    </h2>
-                    <p>
-                        You can join the MITS Foundation incubation program
-                        by submitting an online application through our
-                        official website. The application process includes
-                        providing details about your idea, team, and
-                        business plan. Shortlisted candidates will be
-                        invited for further discussions and evaluations by
-                        our expert panel.
-                    </p>
-                </div>
-                <div class="faq">
-                    <h2>
-                        <span>What services does the foundation offer?</span><span><i
-                                class="fa fa-chevron-down"></i></span>
-                    </h2>
-                    <p>
-                        You can join the MITS Foundation incubation program
-                        by submitting an online application through our
-                        official website. The application process includes
-                        providing details about your idea, team, and
-                        business plan. Shortlisted candidates will be
-                        invited for further discussions and evaluations by
-                        our expert panel.
-                    </p>
-                </div>
-                <div class="faq">
-                    <h2>
-                        <span>How can I contribute as a mentor?</span><span><i class="fa fa-chevron-down"></i></span>
-                    </h2>
-                    <p>
-                        You can join the MITS Foundation incubation program
-                        by submitting an online application through our
-                        official website. The application process includes
-                        providing details about your idea, team, and
-                        business plan. Shortlisted candidates will be
-                        invited for further discussions and evaluations by
-                        our expert panel.
-                    </p>
-                </div>
-                <div class="faq">
-                    <h2>
-                        <span>Is there any fee for incubation services?</span><span><i
-                                class="fa fa-chevron-down"></i></span>
-                    </h2>
-                    <p>
-                        You can join the MITS Foundation incubation program
-                        by submitting an online application through our
-                        official website. The application process includes
-                        providing details about your idea, team, and
-                        business plan. Shortlisted candidates will be
-                        invited for further discussions and evaluations by
-                        our expert panel.
-                    </p>
-                </div>
-                <div class="faq">
-                    <h2>
-                        <span>How do I get in touch with the team?</span><span><i class="fa fa-chevron-down"></i></span>
-                    </h2>
-                    <p>
-                        You can join the MITS Foundation incubation program
-                        by submitting an online application through our
-                        official website. The application process includes
-                        providing details about your idea, team, and
-                        business plan. Shortlisted candidates will be
-                        invited for further discussions and evaluations by
-                        our expert panel.
-                    </p>
-                </div>
-                <div class="faq">
-                    <h2>
-                        <span>Who can I contact for additional
-                            information?</span><span><i class="fa fa-chevron-down"></i></span>
-                    </h2>
-                    <p>
-                        You can join the MITS Foundation incubation program
-                        by submitting an online application through our
-                        official website. The application process includes
-                        providing details about your idea, team, and
-                        business plan. Shortlisted candidates will be
-                        invited for further discussions and evaluations by
-                        our expert panel.
-                    </p>
-                </div>
+            <div class="faqs-container" id="faqs-container">
+                <!-- FAQs will be loaded here dynamically -->
             </div>
+            <script>
+                document.addEventListener('DOMContentLoaded', () => {
+                    fetch('assets/JSON/faqs.json')
+                        .then(response => response.json())
+                        .then(data => {
+                            const faqsContainer = document.getElementById('faqs-container');
+                            data.faqs.forEach(faq => {
+                                const faqElement = document.createElement('div');
+                                faqElement.classList.add('faq');
+                                faqElement.innerHTML = `
+                                    <h2>
+                                        <span>${faq.question}</span><span><i class="fa fa-chevron-down"></i></span>
+                                    </h2>
+                                    <p style="display: none;">${faq.answer}</p>
+                                `;
+                                faqsContainer.appendChild(faqElement);
+
+                                const faqHeader = faqElement.querySelector('h2');
+                                const faqAnswer = faqElement.querySelector('p');
+                                const icon = faqElement.querySelector('i');
+
+                                faqHeader.addEventListener('click', () => {
+                                    const isVisible = faqAnswer.style.display === 'block';
+                                    faqAnswer.style.display = isVisible ? 'none' : 'block';
+                                    icon.classList.toggle('fa-chevron-down', isVisible);
+                                    icon.classList.toggle('fa-chevron-up', !isVisible);
+                                });
+                            });
+                        })
+                        .catch(error => console.error('Error loading FAQs:', error));
+                });
+            </script>
         </section>
     </main>
     <script src="assets/JS/components.js" defer></script>

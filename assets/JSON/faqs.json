@@ -1,0 +1,28 @@
+{
+  "faqs": [
+    {
+      "question": "How can I join the incubation program?",
+      "answer": "You can join the MITS Foundation incubation program by submitting an online application through our official website. The application process includes providing details about your idea, team, and business plan. Shortlisted candidates will be invited for further discussions and evaluations by our expert panel."
+    },
+    {
+      "question": "What services does the foundation offer?",
+      "answer": "The MITS Foundation offers a range of services including mentorship, funding, workspace, and networking opportunities to help startups grow and succeed."
+    },
+    {
+      "question": "How can I contribute as a mentor?",
+      "answer": "You can contribute as a mentor by applying through our official website. We look for experienced professionals who can provide guidance and support to our incubated startups."
+    },
+    {
+      "question": "Is there any fee for incubation services?",
+      "answer": "The MITS Foundation does not charge any fee for its incubation services. We are committed to supporting startups and helping them succeed."
+    },
+    {
+      "question": "How do I get in touch with the team?",
+      "answer": "You can get in touch with the MITS Foundation team by emailing us at manager@mitsfoundation.org or visiting our campus at the address provided on our website."
+    },
+    {
+      "question": "Who can I contact for additional information?",
+      "answer": "For additional information, you can contact our support team through the contact form on our website or by emailing us at info@mitsfoundation.org."
+    }
+  ]
+}

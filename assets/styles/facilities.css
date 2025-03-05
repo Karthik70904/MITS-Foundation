@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap");
 
 :root {
-	--primary-color: #1a4b8c;
+	--primary-color: #1d5392;
 	--secondary-color: #fff;
 	--text-color: #333;
 	--spacing: 2rem;
@@ -30,7 +30,7 @@ body {
 /* Hero Section */
 .hero {
     text-align: center;
-    padding: 5rem 0;
+    padding: 4rem 0;
 }
 
 .hero h1 {
@@ -50,17 +50,23 @@ body {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 3rem;
-    margin-bottom: 5rem;
+    margin-bottom: 3rem;
 }
 
 .feature-card {
     text-align: center;
+    padding: 10px;
+}
+
+.feature-card:hover {
+    background-color: #D6E4F0;
+    border-radius: 0.75rem;
 }
 
 .feature-icon {
     width: 64px;
     height: 64px;
-    margin: 0 auto 1.5rem;
+    margin: 0 auto 1rem;
     padding: 1rem;
     background: var(--secondary);
     border-radius: 50%;
@@ -176,7 +182,8 @@ body {
     right: -100%;
     width: 100%;
     height: 100%;
-    background: rgba(0, 71, 171, 1);
+    /* background: rgba(0, 71, 171, 1); */
+    background: var(--primary-color);
     color: #fff;
     padding: 1.5rem;
     font-size: 1rem;

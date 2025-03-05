@@ -94,9 +94,7 @@
               <p>President,RRR Educational Academy, Madanapalle</p>
             </div>
           </div>
-        </section>
-
-        <section class="directors-section">
+          <hr>
           <h2>Our Facilitators</h2>
           <p class="directors-subtitle">Meet the dedicated facilitators of MITS Foundation</p>
 
@@ -116,10 +114,7 @@
               <p>Advisor - R&D & Consultancy, MITS</p>
             </div>
           </div>
-        </section>
-
-
-        <section class="mentors-section">
+          <hr>
           <h2>Our Mentors</h2>
           <p class="directors-subtitle">Meet the dedicated mentors guiding the next generation of innovators</p>
           <div class="mentors-container" id="mentors-container">
@@ -175,6 +170,86 @@
                 .catch(error => console.error('Error fetching mentors data:', error));
             });
           </script>
+        </section>
+
+        <!-- <section class="directors-section">
+          <h2>Our Facilitators</h2>
+          <p class="directors-subtitle">Meet the dedicated facilitators of MITS Foundation</p>
+
+          <div class="directors-grid">
+            <div class="director-card">
+              <div class="director-image">
+                <img src="assets/images/Directors/principal.jpg" alt="Director">
+              </div>
+              <h3>Dr. C. Yuvaraj</h3>
+              <p>Professor & Principal, MITS</p>
+            </div>
+            <div class="director-card">
+              <div class="director-image">
+                <img src="assets/images/Directors/Thulasiram_sir.jpg" alt="Director">
+              </div>
+              <h3>Dr. R. Thulasiram Naidu</h3>
+              <p>Advisor - R&D & Consultancy, MITS</p>
+            </div>
+          </div>
+        </section>
+
+
+        <section class="mentors-section">
+          <h2>Our Mentors</h2>
+          <p class="directors-subtitle">Meet the dedicated mentors guiding the next generation of innovators</p>
+          <div class="mentors-container" id="mentors-container">
+          </div>
+          <script>
+            document.addEventListener('DOMContentLoaded', () => {
+              fetch('assets/JSON/mentors.json')
+                .then(response => response.json())
+                .then(mentorsData => {
+                  const mentorsContainer = document.getElementById('mentors-container');
+
+                  mentorsData.mentorsSection.mentors.forEach(mentor => {
+                    const mentorCard = document.createElement('div');
+                    mentorCard.classList.add('mentor-card');
+
+                    const mentorImage = document.createElement('div');
+                    mentorImage.classList.add('mentor-image');
+                    const imgElement = document.createElement('img');
+                    imgElement.src = mentor.image;
+                    imgElement.alt = mentor.name;
+                    imgElement.classList.add('mentor-photo');
+                    mentorImage.appendChild(imgElement);
+
+                    const mentorName = document.createElement('h3');
+                    mentorName.textContent = mentor.name;
+                    mentorCard.appendChild(mentorImage);
+                    mentorCard.appendChild(mentorName);
+
+                    const socialIcons = document.createElement('div');
+                    socialIcons.classList.add('social-icons');
+
+                    const emailIcon = document.createElement('a');
+                    emailIcon.href = `mailto:${mentor.email}`;
+                    emailIcon.innerHTML = '<i class="bi bi-envelope-fill"></i>';
+                    emailIcon.classList.add('email-icon');
+                    emailIcon.title = 'Send Email';
+
+                    const linkedinIcon = document.createElement('a');
+                    linkedinIcon.href = mentor.linkedin;
+                    linkedinIcon.target = '_blank';
+                    linkedinIcon.innerHTML = '<i class="bi bi-linkedin"></i>';
+                    linkedinIcon.classList.add('linkedin-icon');
+                    linkedinIcon.title = 'LinkedIn Profile';
+
+                    socialIcons.appendChild(emailIcon);
+                    socialIcons.appendChild(linkedinIcon);
+                    mentorCard.appendChild(socialIcons);
+
+                    mentorsContainer.appendChild(mentorCard);
+                  });
+                })
+                .catch(error => console.error('Error fetching mentors data:', error));
+            });
+          </script> -->
         </section>
 
 

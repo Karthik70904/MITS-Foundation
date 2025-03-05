@@ -1,6 +1,6 @@
 :root {
     --primary-color: #1e4c9a;
-    --secondary-color: #f5f6fa;
+    --secondary-color: #D6E4F0;
     --text-color: #333;
     --white: #ffffff;
 }
@@ -28,7 +28,7 @@ body {
     margin-top: 2rem;
     background: var(--secondary-color);
     padding: 2rem;
-    border-radius: 10px;
+    border-radius: 36px;
     align-items: center;
     justify-content: center;
 }

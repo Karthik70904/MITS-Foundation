@@ -287,7 +287,10 @@ main {
 	margin-bottom: 1rem;
 	font-size: 0.9rem;
 }
-
+hr{
+	margin: 50px;
+	color: var(--primary-color);
+}
 @media (max-width: 768px) {
 	.directors-grid {
 		flex-direction: column;

@@ -82,7 +82,8 @@ body {
 }
 
 .nav-links.transparent {
-    opacity: 0.8;
+    opacity: 0.85;
+	border: 2px solid #fff5f3;
 }
 
 .nav-links a {

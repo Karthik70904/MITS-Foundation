@@ -39,10 +39,15 @@ document.addEventListener("DOMContentLoaded", function() {
 
 function toggleMenu() {
     var navLinks = document.querySelector('.nav-links');
-    navLinks.classList.toggle('show');
-    // console.log('Menu toggled');
-    document.querySelector('.hamburger i').classList.toggle('bi-x');
-    // console.log(navLinks.classList);
+    if (navLinks) {
+        navLinks.classList.toggle('show');
+        // console.log('Menu toggled');
+        var hamburgerIcon = document.querySelector('.hamburger i');
+        if (hamburgerIcon) {
+            hamburgerIcon.classList.toggle('bi-x');
+        }
+        // console.log(navLinks.classList);
+    }
 }
 
 // for logo click
@@ -57,11 +62,13 @@ function handleLogoClick(url) {
 document.addEventListener('scroll', function() {
     const hamburger = document.querySelector('.hamburger');
     const navLinks = document.querySelector('.nav-links');
-    if (window.scrollY > 50) { // Adjust the scroll value as needed
-        hamburger.classList.add('transparent');
-        navLinks.classList.add('transparent');
-    } else {
-        hamburger.classList.remove('transparent');
-        navLinks.classList.remove('transparent');
+    if (hamburger && navLinks) {
+        if (window.scrollY > 50) { // Adjust the scroll value as needed
+            hamburger.classList.add('transparent');
+            navLinks.classList.add('transparent');
+        } else {
+            hamburger.classList.remove('transparent');
+            navLinks.classList.remove('transparent');
+        }
     }
 });
